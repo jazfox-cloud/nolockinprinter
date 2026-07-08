@@ -6,6 +6,12 @@ const pages = [
   '/openprinter/alternatives/',
   '/guides/no-subscription-printers/',
   '/guides/linux-compatible-printers/',
+  '/about/',
+  '/contact/',
+  '/editorial-policy/',
+  '/affiliate-disclosure/',
+  '/privacy/',
+  '/terms/',
 ];
 
 export const GET: APIRoute = () => {

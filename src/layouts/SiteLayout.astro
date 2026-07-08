@@ -20,12 +20,15 @@ const pageTitle = title.includes('No Lock-In Printer') ? title : `${title} | No 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{pageTitle}</title>
     <meta name="description" content={description} />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#116d65" />
     <link rel="canonical" href={canonicalUrl} />
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonicalUrl} />
     <meta property="og:image" content={`${siteUrl}/images/hero-printer.png`} />
+    <meta name="twitter:card" content="summary_large_image" />
   </head>
   <body>
     <header class="site-header">
@@ -47,8 +50,18 @@ const pageTitle = title.includes('No Lock-In Printer') ? title : `${title} | No 
     </main>
     <footer class="footer">
       <div class="container">
-        <span>No Lock-In Printer</span>
-        <span>Independent buyer notes. Last reviewed July 2026.</span>
+        <div>
+          <strong>No Lock-In Printer</strong>
+          <p>Independent buyer notes. Last reviewed July 2026.</p>
+        </div>
+        <div class="footer-links" aria-label="Footer navigation">
+          <a href="/about/">About</a>
+          <a href="/contact/">Contact</a>
+          <a href="/editorial-policy/">Editorial policy</a>
+          <a href="/affiliate-disclosure/">Affiliate disclosure</a>
+          <a href="/privacy/">Privacy</a>
+          <a href="/terms/">Terms</a>
+        </div>
       </div>
     </footer>
   </body>
