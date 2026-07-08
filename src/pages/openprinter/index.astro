@@ -1,0 +1,61 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import OpenPrinterStatus from '../../components/OpenPrinterStatus.astro';
+import PrinterTable from '../../components/PrinterTable.astro';
+import openprinter from '../../data/openprinter.json';
+---
+
+<SiteLayout
+  title="OpenPrinter Status Tracker"
+  description="A sober OpenPrinter tracker covering confirmed facts, missing price and release details, licensing limits, and practical alternatives."
+>
+  <div class="article">
+    <p class="eyebrow" style="color: var(--amber);">OpenPrinter tracker</p>
+    <h1>OpenPrinter is interesting. It is not a finished buying option yet.</h1>
+    <p class="lead">
+      This page tracks the project as a frontier topic while keeping buyers grounded in what is confirmed, missing, and still risky.
+    </p>
+  </div>
+
+  <section class="section alt">
+    <div class="container split">
+      <OpenPrinterStatus />
+      <div class="panel">
+        <div class="panel-inner">
+          <p class="eyebrow" style="color: var(--amber);">What to watch</p>
+          <h2>Before anyone calls it a replacement</h2>
+          <ul class="status-list">
+            {openprinter.watchItems.map((item) => <li>{item}</li>)}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <article class="article">
+    <section class="article-section">
+      <h2>Why the licensing detail matters</h2>
+      <p>
+        OpenPrinter is often described as open source or open hardware, but the practical buyer question is narrower:
+        can normal users repair, modify, and maintain it without being locked into a vendor-controlled supply chain?
+        The CC BY-NC-SA 4.0 detail is important because non-commercial terms can limit independent manufacturing and resale.
+      </p>
+      <div class="callout">
+        For this MVP, we treat OpenPrinter as an open-hardware-inspired project under observation, not as a confirmed commercial printer recommendation.
+      </div>
+    </section>
+
+    <section class="article-section">
+      <h2>What to buy while waiting</h2>
+      <p>
+        If you need a printer now, the safer path is to choose a mature no-subscription or refillable model and keep OpenPrinter on a watchlist.
+      </p>
+    </section>
+  </article>
+
+  <section class="section">
+    <div class="container">
+      <PrinterTable limit={4} />
+    </div>
+  </section>
+</SiteLayout>

@@ -1,0 +1,112 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import OpenPrinterStatus from '../components/OpenPrinterStatus.astro';
+import PrinterTable from '../components/PrinterTable.astro';
+---
+
+<SiteLayout
+  title="No Lock-In Printer"
+  description="Independent printer buying guides for avoiding ink subscriptions, cartridge lock-in, firmware surprises, and weak Linux support."
+>
+  <section class="hero">
+    <img src="/images/hero-printer.png" alt="A modern home office printer with refillable ink bottles on a desk" />
+    <div class="container">
+      <div class="hero-content">
+        <p class="eyebrow">Independent printer buying intelligence</p>
+        <h1>Buy a printer that does not own you back.</h1>
+        <p class="hero-copy">
+          No Lock-In Printer tracks subscription-free printers, refillable ink systems, Linux-friendly models, and the still-unproven OpenPrinter project.
+        </p>
+        <div class="actions">
+          <a class="button" href="/guides/no-subscription-printers/">Start with buyer picks</a>
+          <a class="button secondary" href="/openprinter/">Check OpenPrinter status</a>
+        </div>
+        <form class="newsletter" aria-label="Email signup">
+          <input type="email" placeholder="Email for OpenPrinter launch and no-lock-in picks" aria-label="Email address" />
+          <button type="submit">Notify me</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow" style="color: var(--amber);">Two-track strategy</p>
+          <h2>Today’s safe buys, tomorrow’s open hardware.</h2>
+        </div>
+        <p>
+          The site is built around a durable commercial core, with OpenPrinter used as a high-interest frontier topic rather than the whole business.
+        </p>
+      </div>
+
+      <div class="grid-2">
+        <article class="card feature-card">
+          <div class="card-body">
+            <div class="tag-row">
+              <span class="tag">Commercial core</span>
+              <span class="tag amber">Buy now</span>
+            </div>
+            <h3>The Resistance</h3>
+            <p class="muted">
+              Practical guides for people who want refillable ink, no mandatory subscriptions, predictable toner, and fewer firmware surprises.
+            </p>
+            <div class="actions">
+              <a class="button" href="/guides/no-subscription-printers/">View no-subscription picks</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card feature-card">
+          <div class="card-body">
+            <div class="tag-row">
+              <span class="tag">Frontier tracker</span>
+              <span class="tag brick">Not launched</span>
+            </div>
+            <h3>The Frontier</h3>
+            <p class="muted">
+              A sober OpenPrinter tracker that separates confirmed facts from wishful thinking: no confirmed price, no release date, and licensing limits to understand.
+            </p>
+            <div class="actions">
+              <a class="button" href="/openprinter/">Open status board</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="container split">
+      <OpenPrinterStatus />
+      <div class="panel">
+        <div class="panel-inner">
+          <p class="eyebrow" style="color: var(--amber);">Recommended first database</p>
+          <h2>Printer shortlist</h2>
+          <p class="muted">
+            The first product table is deliberately small. Each model earns a place only if it supports the long-term anti-lock-in angle.
+          </p>
+          <ul class="status-list">
+            <li>No mandatory ink subscription as the primary buying logic.</li>
+            <li>Reasonable path to cheaper ink, toner, or refillable supply.</li>
+            <li>Clear warnings where Linux support, third-party supplies, or firmware behavior need confirmation.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow" style="color: var(--amber);">MVP comparison table</p>
+          <h2>Printers worth researching first.</h2>
+        </div>
+        <p>These are starter candidates, not final lab-tested rankings. The point is to preview the data-driven format.</p>
+      </div>
+      <PrinterTable limit={4} />
+    </div>
+  </section>
+</SiteLayout>

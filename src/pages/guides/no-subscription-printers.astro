@@ -1,0 +1,49 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import PrinterTable from '../../components/PrinterTable.astro';
+---
+
+<SiteLayout
+  title="Best No-Subscription Printers"
+  description="A practical guide to printers that do not require mandatory ink subscriptions, with notes on refillable tanks, toner, Linux support, and lock-in risk."
+>
+  <div class="article">
+    <p class="eyebrow" style="color: var(--amber);">Buyer guide</p>
+    <h1>Best no-subscription printers to research first.</h1>
+    <p class="lead">
+      A no-subscription printer should still work normally if you never join an ink plan. This first guide prioritizes ownership clarity over flashy app features.
+    </p>
+  </div>
+
+  <section class="section alt">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow" style="color: var(--amber);">Starter picks</p>
+          <h2>Models that fit the no-lock-in thesis</h2>
+        </div>
+        <p>These are research candidates for the local preview. Full production pages should add current price checks, exact cartridge numbers, and availability notes.</p>
+      </div>
+      <PrinterTable category="no-subscription" />
+    </div>
+  </section>
+
+  <article class="article">
+    <section class="article-section">
+      <h2>What “no subscription” should mean</h2>
+      <p>
+        It should mean the printer is usable without a paid ink plan, cloud account dependency, or surprise feature loss when you cancel. Optional supply programs are less risky than printers whose value proposition depends on staying subscribed.
+      </p>
+    </section>
+
+    <section class="article-section">
+      <h2>Buying checklist</h2>
+      <ul>
+        <li>Can it print over USB, local network, AirPrint, or CUPS without a vendor cloud account?</li>
+        <li>Are standard cartridges, toner, or refill bottles available from more than one retailer?</li>
+        <li>Do firmware updates affect third-party supplies or older cartridges?</li>
+        <li>Does the printer keep working if an optional ink subscription is canceled?</li>
+      </ul>
+    </section>
+  </article>
+</SiteLayout>

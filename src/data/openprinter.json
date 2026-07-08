@@ -1,0 +1,31 @@
+{
+  "name": "Open Printer",
+  "maker": "Open Tools",
+  "status": "Pre-launch / coming soon",
+  "lastReviewed": "July 2026",
+  "summary": "An early open hardware-inspired inkjet printer project that is not yet a finished consumer product.",
+  "officialLinks": [
+    {
+      "label": "Crowd Supply project page",
+      "url": "https://www.crowdsupply.com/open-tools/open-printer"
+    },
+    {
+      "label": "Open Tools official site",
+      "url": "https://www.opentools.studio/"
+    }
+  ],
+  "confirmedFacts": [
+    "No confirmed retail price is published.",
+    "No final shipping date is published.",
+    "The project references CUPS support and common HP cartridge families.",
+    "Design materials are presented under a CC BY-NC-SA 4.0 license.",
+    "Open Tools says patent and design registrations have been filed."
+  ],
+  "watchItems": [
+    "Final price and cartridge economics",
+    "Replacement part availability",
+    "Driver and firmware maintenance",
+    "Whether the non-commercial license limits community manufacturing",
+    "Real print quality and reliability once independent reviews exist"
+  ]
+}

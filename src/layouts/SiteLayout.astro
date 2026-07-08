@@ -1,0 +1,55 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+}
+
+const { title, description, canonical = Astro.url.pathname } = Astro.props;
+const siteUrl = 'https://nolockinprinter.com';
+const canonicalUrl = new URL(canonical, siteUrl).toString();
+const pageTitle = title.includes('No Lock-In Printer') ? title : `${title} | No Lock-In Printer`;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={`${siteUrl}/images/hero-printer.png`} />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav" aria-label="Primary navigation">
+        <a class="brand" href="/">
+          <span class="brand-mark" aria-hidden="true">N</span>
+          <span>No Lock-In Printer</span>
+        </a>
+        <div class="nav-links">
+          <a href="/guides/no-subscription-printers/">No-subscription picks</a>
+          <a href="/guides/linux-compatible-printers/">Linux printers</a>
+          <a href="/openprinter/">OpenPrinter tracker</a>
+          <a href="/openprinter/alternatives/">Alternatives</a>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <slot />
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <span>No Lock-In Printer</span>
+        <span>Independent buyer notes. Last reviewed July 2026.</span>
+      </div>
+    </footer>
+  </body>
+</html>

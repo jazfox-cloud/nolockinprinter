@@ -1,0 +1,44 @@
+---
+import printers from '../data/printers.json';
+
+interface Props {
+  category?: string;
+  limit?: number;
+}
+
+const { category, limit } = Astro.props;
+const filtered = printers.filter((printer) => !category || printer.category.includes(category));
+const rows = typeof limit === 'number' ? filtered.slice(0, limit) : filtered;
+---
+
+<div class="comparison-wrap">
+  <table>
+    <thead>
+      <tr>
+        <th>Printer</th>
+        <th>Best fit</th>
+        <th>Lock-in risk</th>
+        <th>Ink model</th>
+        <th>Linux note</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      {rows.map((printer) => (
+        <tr>
+          <td>
+            <strong>{printer.name}</strong>
+            <p class="muted">{printer.riskNotes}</p>
+          </td>
+          <td>{printer.bestFor}</td>
+          <td>
+            <span class:list={['score', printer.lockInScore.toLowerCase()]}>{printer.lockInScore}</span>
+          </td>
+          <td>{printer.inkModel}</td>
+          <td>{printer.linuxNotes}</td>
+          <td><a class="button" href={printer.ctaUrl} rel="nofollow sponsored">{printer.ctaLabel}</a></td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</div>

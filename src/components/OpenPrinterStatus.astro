@@ -1,0 +1,17 @@
+---
+import openprinter from '../data/openprinter.json';
+---
+
+<section class="panel" aria-labelledby="openprinter-status">
+  <div class="panel-inner">
+    <div class="tag-row">
+      <span class="tag amber">{openprinter.status}</span>
+      <span class="tag">Reviewed {openprinter.lastReviewed}</span>
+    </div>
+    <h2 id="openprinter-status">{openprinter.name} status board</h2>
+    <p class="muted">{openprinter.summary}</p>
+    <ul class="status-list">
+      {openprinter.confirmedFacts.map((fact) => <li>{fact}</li>)}
+    </ul>
+  </div>
+</section>

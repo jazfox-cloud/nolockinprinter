@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Brother INKvestment Tank MFC-J4335DW",
+    "category": ["no-subscription", "linux"],
+    "bestFor": "Home office users who want cartridge-based simplicity without a mandatory ink plan.",
+    "lockInScore": "Low",
+    "subscriptionRequired": "No",
+    "linuxNotes": "Brother publishes Linux drivers for many models; confirm exact model support before purchase.",
+    "inkModel": "High-yield cartridges",
+    "riskNotes": "Cartridges are still proprietary, but the ownership model is clearer than subscription-first printers.",
+    "ctaLabel": "Check current price",
+    "ctaUrl": "https://www.amazon.com/s?k=Brother+MFC-J4335DW"
+  },
+  {
+    "name": "Epson EcoTank ET-2850",
+    "category": ["no-subscription", "refillable"],
+    "bestFor": "Households that print often and prefer refillable tanks over cartridges.",
+    "lockInScore": "Low",
+    "subscriptionRequired": "No",
+    "linuxNotes": "Epson has Linux driver coverage for many EcoTank models; verify distribution support.",
+    "inkModel": "Refillable ink tanks",
+    "riskNotes": "Lower ink cost, but maintenance and printhead care matter if the printer sits unused.",
+    "ctaLabel": "Check current price",
+    "ctaUrl": "https://www.amazon.com/s?k=Epson+EcoTank+ET-2850"
+  },
+  {
+    "name": "Canon MegaTank G3270",
+    "category": ["no-subscription", "refillable"],
+    "bestFor": "Budget buyers who want refillable ink tanks and basic home printing.",
+    "lockInScore": "Medium",
+    "subscriptionRequired": "No",
+    "linuxNotes": "Linux support varies by region and driver package; check before buying.",
+    "inkModel": "Refillable ink tanks",
+    "riskNotes": "Good ink economics, but software and driver support can be less predictable.",
+    "ctaLabel": "Check current price",
+    "ctaUrl": "https://www.amazon.com/s?k=Canon+MegaTank+G3270"
+  },
+  {
+    "name": "Brother HL-L2460DW",
+    "category": ["no-subscription", "linux", "laser"],
+    "bestFor": "Text-heavy printing with low fuss and no color ink maintenance.",
+    "lockInScore": "Low",
+    "subscriptionRequired": "No",
+    "linuxNotes": "Brother laser printers are commonly used with Linux, CUPS, AirPrint, and driverless setups.",
+    "inkModel": "Toner cartridge",
+    "riskNotes": "Black-and-white only; check toner chip behavior and third-party toner compatibility.",
+    "ctaLabel": "Check current price",
+    "ctaUrl": "https://www.amazon.com/s?k=Brother+HL-L2460DW"
+  }
+]

@@ -1,0 +1,49 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import PrinterTable from '../../components/PrinterTable.astro';
+---
+
+<SiteLayout
+  title="Linux-Compatible Printers"
+  description="A Linux printer buying guide focused on CUPS, driverless printing, AirPrint compatibility, vendor drivers, and no-lock-in ownership."
+>
+  <div class="article">
+    <p class="eyebrow" style="color: var(--amber);">Linux guide</p>
+    <h1>Linux-compatible printers with fewer ownership traps.</h1>
+    <p class="lead">
+      Linux printer shopping is not just about drivers. It is also about local printing, predictable supplies, and avoiding app-only workflows.
+    </p>
+  </div>
+
+  <section class="section alt">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow" style="color: var(--amber);">Linux shortlist</p>
+          <h2>Start with local-friendly models</h2>
+        </div>
+        <p>Exact distro support should be checked before purchase. The MVP marks models that are plausible fits for Linux users and need deeper validation.</p>
+      </div>
+      <PrinterTable category="linux" />
+    </div>
+  </section>
+
+  <article class="article">
+    <section class="article-section">
+      <h2>What to verify before buying</h2>
+      <ul>
+        <li>CUPS support or driverless printing support.</li>
+        <li>Scanner support if you need all-in-one features.</li>
+        <li>USB and local network printing without forced cloud setup.</li>
+        <li>Whether the vendor publishes current Linux packages for your architecture.</li>
+      </ul>
+    </section>
+
+    <section class="article-section">
+      <h2>Why this page belongs on the site</h2>
+      <p>
+        Linux-compatible printer searches overlap naturally with the no-lock-in audience: these users care about local control, repairability, open protocols, and predictable ownership.
+      </p>
+    </section>
+  </article>
+</SiteLayout>
