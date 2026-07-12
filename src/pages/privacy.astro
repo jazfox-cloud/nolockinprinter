@@ -1,5 +1,6 @@
 ---
 import SiteLayout from '../layouts/SiteLayout.astro';
+import EmailLink from '../components/EmailLink.astro';
 ---
 
 <SiteLayout
@@ -41,7 +42,7 @@ import SiteLayout from '../layouts/SiteLayout.astro';
     <section class="article-section">
       <h2>Contact</h2>
       <p>
-        Privacy questions can be sent to <a href="mailto:hello@nolockinprinter.com">hello@nolockinprinter.com</a>.
+        Privacy questions can be sent to <EmailLink user="hello" domain="nolockinprinter.com" />.
       </p>
     </section>
     <p>Last updated July 11, 2026.</p>

@@ -1,5 +1,6 @@
 ---
 import SiteLayout from '../layouts/SiteLayout.astro';
+import EmailLink from '../components/EmailLink.astro';
 ---
 
 <SiteLayout
@@ -16,7 +17,7 @@ import SiteLayout from '../layouts/SiteLayout.astro';
     <section class="article-section">
       <h2>Email</h2>
       <p>
-        For now, contact us at <a href="mailto:hello@nolockinprinter.com">hello@nolockinprinter.com</a>. If this mailbox is not yet configured, use the domain owner contact method in Cloudflare until email routing is enabled.
+        For now, contact us at <EmailLink user="hello" domain="nolockinprinter.com" />. If this mailbox is not yet configured, use the domain owner contact method in Cloudflare until email routing is enabled.
       </p>
     </section>
 
