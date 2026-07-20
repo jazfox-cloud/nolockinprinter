@@ -1,0 +1,21 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+---
+
+<SiteLayout
+  title="Page not found"
+  description="The page you requested could not be found on No Lock-In Printer."
+  canonical={false}
+  robots="noindex, follow"
+>
+  <article class="article">
+    <p class="eyebrow" style="color: var(--amber);">404 error</p>
+    <h1>Page not found.</h1>
+    <p class="lead">
+      The page may have moved, or the address may be incorrect. You can return to the homepage to continue browsing independent printer buying guides.
+    </p>
+    <div class="actions">
+      <a class="button" href="/">Return to homepage</a>
+    </div>
+  </article>
+</SiteLayout>

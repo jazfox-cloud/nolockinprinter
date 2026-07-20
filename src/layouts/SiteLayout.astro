@@ -4,12 +4,18 @@ import '../styles/global.css';
 interface Props {
   title: string;
   description: string;
-  canonical?: string;
+  canonical?: string | false;
+  robots?: string;
 }
 
-const { title, description, canonical = Astro.url.pathname } = Astro.props;
+const {
+  title,
+  description,
+  canonical = Astro.url.pathname,
+  robots = 'index, follow',
+} = Astro.props;
 const siteUrl = 'https://nolockinprinter.com';
-const canonicalUrl = new URL(canonical, siteUrl).toString();
+const canonicalUrl = canonical === false ? undefined : new URL(canonical, siteUrl).toString();
 const pageTitle = title.includes('No Lock-In Printer') ? title : `${title} | No Lock-In Printer`;
 ---
 
@@ -20,13 +26,13 @@ const pageTitle = title.includes('No Lock-In Printer') ? title : `${title} | No 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{pageTitle}</title>
     <meta name="description" content={description} />
-    <meta name="robots" content="index, follow" />
+    <meta name="robots" content={robots} />
     <meta name="theme-color" content="#116d65" />
-    <link rel="canonical" href={canonicalUrl} />
+    {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content={canonicalUrl} />
+    {canonicalUrl && <meta property="og:url" content={canonicalUrl} />}
     <meta property="og:image" content={`${siteUrl}/images/og-printer.jpg`} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
