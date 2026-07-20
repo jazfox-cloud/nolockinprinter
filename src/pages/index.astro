@@ -9,7 +9,26 @@ import PrinterTable from '../components/PrinterTable.astro';
   description="Independent printer buying guides for avoiding ink subscriptions, cartridge lock-in, firmware surprises, and weak Linux support."
 >
   <section class="hero">
-    <img src="/images/hero-printer.png" alt="A modern home office printer with refillable ink bottles on a desk" />
+    <picture>
+      <source
+        type="image/avif"
+        srcset="/images/hero-printer-960.avif 960w, /images/hero-printer-1754.avif 1754w"
+        sizes="100vw"
+      />
+      <source
+        type="image/webp"
+        srcset="/images/hero-printer-960.webp 960w, /images/hero-printer-1754.webp 1754w"
+        sizes="100vw"
+      />
+      <img
+        src="/images/og-printer.jpg"
+        width="1200"
+        height="630"
+        alt="A modern home office printer with refillable ink bottles on a desk"
+        fetchpriority="high"
+        decoding="async"
+      />
+    </picture>
     <div class="container">
       <div class="hero-content">
         <p class="eyebrow">Independent printer buying intelligence</p>

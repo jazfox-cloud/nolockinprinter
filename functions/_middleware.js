@@ -2,6 +2,7 @@ export async function onRequest(context) {
   const url = new URL(context.request.url);
 
   if (url.hostname === 'www.nolockinprinter.com') {
+    url.protocol = 'https:';
     url.hostname = 'nolockinprinter.com';
     return Response.redirect(url.toString(), 301);
   }
