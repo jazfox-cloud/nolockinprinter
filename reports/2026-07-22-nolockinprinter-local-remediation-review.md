@@ -106,7 +106,6 @@ Google 当前政策依据：
 官方来源：
 
 - [Brother HL-L2460DW 产品与规格](https://www.brother-usa.com/p/laser-printers/HLL2460DW)
-- [Brother HL-L2460DW 官方 brochure](https://www.brother-usa.com/-/media/brother/product-catalog-media/documents/2023/12/14/21/53/hl-l2460dw_brochure.pdf)
 - [Brother Refresh EZ Print](https://www.brother-usa.com/ink-toner/learn-more/refresh-ez-print-subscription)
 
 ## 6. 评分方法

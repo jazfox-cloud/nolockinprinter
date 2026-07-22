@@ -151,7 +151,7 @@
     "categories": ["no-subscription", "linux", "laser", "monochrome"],
     "region": "United States",
     "lastVerified": "2026-07-22",
-    "evidenceBasis": "Published Brother U.S. product specifications and brochure. Not independently tested.",
+    "evidenceBasis": "Published Brother U.S. product specifications and support documentation. Not independently tested.",
     "summary": "A monochrome laser printer with automatic duplex, Ethernet, USB, dual-band Wi-Fi, Wi-Fi Direct, a 250-sheet tray, and official Windows, macOS, Linux, and ChromeOS compatibility listings.",
     "bestFor": "A text-heavy home office that wants wired or local-network printing, automatic duplex, Linux listed by the manufacturer, and no need for color, scanning, or copying.",
     "notFor": "Anyone who needs color, scanning, copying, fax, or evidence that third-party toner will remain accepted after every firmware update.",
@@ -168,29 +168,28 @@
     "noLockInRelation": "The strongest ownership case is documented Linux support, Ethernet/USB/local protocols, and ordinary TN830-family toner plus DR830 drum supplies. Refresh is available on eligible Brother hardware, but subscription cartridges have separate cancellation rules; this page does not treat subscription eligibility as freedom from supply lock-in.",
     "dataBoundary": "Manufacturer documents hardware, protocols, OS compatibility, supplies, and warranty. We did not test driverless discovery, distribution-specific scanning (there is no scanner), firmware, third-party toner, page yield, print quality, or reliability.",
     "specs": [
-      {"label": "Print technology / color", "value": "Electrophotographic monochrome laser", "sources": ["brother-hl-product", "brother-hl-brochure"]},
+      {"label": "Print technology / color", "value": "Electrophotographic monochrome laser", "sources": ["brother-hl-product"]},
       {"label": "Functions", "value": "Print only", "sources": ["brother-hl-product"]},
       {"label": "Print speed", "value": "Up to 36 ppm black", "sources": ["brother-hl-product"]},
       {"label": "Automatic duplex", "value": "Yes, enabled by default", "sources": ["brother-hl-product"]},
       {"label": "Connections", "value": "Hi-Speed USB 2.0, Ethernet, 2.4/5 GHz Wi-Fi, Wi-Fi Direct", "sources": ["brother-hl-product"]},
       {"label": "Mobile / local protocols", "value": "AirPrint, Mopria, Brother Mobile Connect, IPP/IPPS, LPR/LPD, mDNS, and Port 9100 among listed protocols", "sources": ["brother-hl-product"]},
-      {"label": "Paper capacity", "value": "250-sheet standard tray plus single-sheet manual feed", "sources": ["brother-hl-brochure"]},
-      {"label": "Consumables", "value": "TN830, TN830XL, or TN830V toner; DR830 drum", "sources": ["brother-hl-brochure"]},
+      {"label": "Paper capacity", "value": "250-sheet standard tray plus single-sheet manual feed", "sources": ["brother-hl-product"]},
+      {"label": "Consumables", "value": "TN830, TN830XL, or TN830V toner; DR830 drum", "sources": ["brother-hl-product"]},
       {"label": "Subscription", "value": "Brother Refresh is a separate enrollment service; cancellation may require replacing Refresh cartridges with non-Refresh supplies", "sources": ["brother-refresh"]},
       {"label": "Official OS listing", "value": "Windows, macOS, Linux, and ChromeOS", "sources": ["brother-hl-product"]},
       {"label": "Warranty", "value": "1-year limited warranty in the U.S.", "sources": ["brother-hl-product"]}
     ],
     "ownershipChecks": [
-      {"label": "Subscription choice", "status": "Documented", "note": "Refresh requires enrollment; ordinary toner families are separately documented.", "sources": ["brother-refresh", "brother-hl-brochure"]},
-      {"label": "Basic use without subscription", "status": "Documented", "note": "The product ships with a starter toner and documents ordinary TN830-family replacements.", "sources": ["brother-hl-brochure"]},
-      {"label": "Consumable transparency", "status": "Documented", "note": "Toner and separate drum part families are identified.", "sources": ["brother-hl-brochure"]},
+      {"label": "Subscription choice", "status": "Documented", "note": "Refresh requires enrollment; ordinary toner families are separately documented.", "sources": ["brother-refresh", "brother-hl-product"]},
+      {"label": "Basic use without subscription", "status": "Documented", "note": "The product ships with a starter toner and documents ordinary TN830-family replacements.", "sources": ["brother-hl-product"]},
+      {"label": "Consumable transparency", "status": "Documented", "note": "Toner and separate drum part families are identified.", "sources": ["brother-hl-product"]},
       {"label": "Local connection", "status": "Documented", "note": "USB, Ethernet, Wi-Fi Direct, IPP/IPPS, and LPR/LPD are listed.", "sources": ["brother-hl-product"]},
-      {"label": "Long-term support material", "status": "Mixed", "note": "Product, protocol, driver, and supply documents exist; third-party toner and future firmware behavior are not promised.", "sources": ["brother-hl-product", "brother-hl-brochure"]},
-      {"label": "Documentation completeness", "status": "Documented", "note": "Core hardware, protocols, Linux compatibility, supplies, and warranty are all covered by official U.S. sources.", "sources": ["brother-hl-product", "brother-hl-brochure"]}
+      {"label": "Long-term support material", "status": "Mixed", "note": "Product, protocol, driver, and supply documents exist; third-party toner and future firmware behavior are not promised.", "sources": ["brother-hl-product"]},
+      {"label": "Documentation completeness", "status": "Documented", "note": "Core hardware, protocols, Linux compatibility, supplies, and warranty are all covered by official U.S. sources.", "sources": ["brother-hl-product"]}
     ],
     "sources": [
       {"id": "brother-hl-product", "title": "Brother HL-L2460DW product and specifications", "url": "https://www.brother-usa.com/p/laser-printers/HLL2460DW"},
-      {"id": "brother-hl-brochure", "title": "Brother HL-L2460DW official brochure", "url": "https://www.brother-usa.com/-/media/brother/product-catalog-media/documents/2023/12/14/21/53/hl-l2460dw_brochure.pdf"},
       {"id": "brother-refresh", "title": "Brother Refresh EZ Print subscription information", "url": "https://www.brother-usa.com/ink-toner/learn-more/refresh-ez-print-subscription"}
     ]
   }
