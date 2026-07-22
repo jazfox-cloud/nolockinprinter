@@ -1,7 +1,6 @@
 ---
 import SiteLayout from '../../layouts/SiteLayout.astro';
 import OpenPrinterStatus from '../../components/OpenPrinterStatus.astro';
-import PrinterTable from '../../components/PrinterTable.astro';
 import openprinter from '../../data/openprinter.json';
 ---
 
@@ -41,7 +40,7 @@ import openprinter from '../../data/openprinter.json';
         The CC BY-NC-SA 4.0 detail is important because non-commercial terms can limit independent manufacturing and resale.
       </p>
       <div class="callout">
-        For this MVP, we treat OpenPrinter as an open-hardware-inspired project under observation, not as a confirmed commercial printer recommendation.
+        We treat OpenPrinter as an open-hardware-inspired project under observation, not as a confirmed commercial printer recommendation.
       </div>
     </section>
 
@@ -55,7 +54,9 @@ import openprinter from '../../data/openprinter.json';
 
   <section class="section">
     <div class="container">
-      <PrinterTable limit={4} />
+      <div class="callout">
+        Need a printer now? Read the <a href="/openprinter/alternatives/">OpenPrinter alternatives decision guide</a> or the <a href="/guides/no-subscription-printers/">field-sourced model reviews</a>.
+      </div>
     </div>
   </section>
 </SiteLayout>

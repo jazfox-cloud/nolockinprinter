@@ -1,9 +1,9 @@
 {
   "name": "Open Printer",
   "maker": "Open Tools",
-  "status": "Pre-launch / coming soon",
-  "lastReviewed": "July 2026",
-  "summary": "An early open hardware-inspired inkjet printer project that is not yet a finished consumer product.",
+  "status": "Unreleased project",
+  "lastReviewed": "2026-07-22",
+  "summary": "An unreleased open hardware-inspired inkjet project. The project pages publish planned specifications, but do not yet establish a shipped consumer product.",
   "officialLinks": [
     {
       "label": "Crowd Supply project page",
@@ -15,12 +15,12 @@
     }
   ],
   "confirmedFacts": [
-    "No confirmed retail price is published.",
-    "No final shipping date is published.",
-    "The project references CUPS support and common HP cartridge families.",
-    "Design materials are presented under a CC BY-NC-SA 4.0 license.",
+    "No campaign price or final shipping date was visible on the two reviewed project pages.",
+    "The developers state planned CUPS support and HP 63, HP 302, and HP 803 cartridge compatibility by region.",
+    "The developers state that project files will use CC BY-NC-SA 4.0, while also saying files will be released only after the final version is ready.",
     "Open Tools says patent and design registrations have been filed."
   ],
+  "dataBoundary": "These are developer-published plans, not independently verified product performance. No retail unit, final speed, campaign price, shipment date, reliability record, or long-term parts supply was established by the reviewed pages.",
   "watchItems": [
     "Final price and cartridge economics",
     "Replacement part availability",

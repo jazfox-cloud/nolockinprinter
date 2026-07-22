@@ -1,6 +1,5 @@
 ---
 import SiteLayout from '../../layouts/SiteLayout.astro';
-import PrinterTable from '../../components/PrinterTable.astro';
 ---
 
 <SiteLayout
@@ -9,7 +8,7 @@ import PrinterTable from '../../components/PrinterTable.astro';
 >
   <div class="article">
     <p class="eyebrow" style="color: var(--amber);">Linux guide</p>
-    <h1>Linux-compatible printers with fewer ownership traps.</h1>
+    <h1>A Linux printer with manufacturer-documented support—and three models with unresolved Linux evidence.</h1>
     <p class="lead">
       Linux printer shopping is not just about drivers. It is also about local printing, predictable supplies, and avoiding app-only workflows.
     </p>
@@ -19,12 +18,22 @@ import PrinterTable from '../../components/PrinterTable.astro';
     <div class="container">
       <div class="section-head">
         <div>
-          <p class="eyebrow" style="color: var(--amber);">Linux shortlist</p>
-          <h2>Start with local-friendly models</h2>
+          <p class="eyebrow" style="color: var(--amber);">Documented Linux option</p>
+          <h2>Brother HL-L2460DW</h2>
         </div>
-        <p>Exact distro support should be checked before purchase. The MVP marks models that are plausible fits for Linux users and need deeper validation.</p>
+        <p>Brother's U.S. specification page explicitly lists Linux and publishes local network protocols. Exact distribution, architecture, and current driver availability still need a pre-purchase check.</p>
       </div>
-      <PrinterTable category="linux" />
+      <div class="linux-evidence-card">
+        <h3>Why it clears this page's evidence bar</h3>
+        <ul>
+          <li>Brother explicitly lists Linux among compatible operating systems.</li>
+          <li>Its specifications list Ethernet, USB, Wi-Fi Direct, IPP/IPPS, LPR/LPD, mDNS, and Port 9100.</li>
+          <li>The documented TN830-family toner and DR830 drum can be purchased outside a Refresh subscription.</li>
+          <li>It is monochrome and print-only, so it is not a substitute for a color all-in-one.</li>
+        </ul>
+        <p><a href="https://www.brother-usa.com/p/laser-printers/HLL2460DW">Brother HL-L2460DW official specifications</a> · <a href="/guides/no-subscription-printers/#brother-hl-l2460dw">Full ownership evidence review</a></p>
+        <p class="evidence-note"><strong>Last verified:</strong> 2026-07-22. Based on published manufacturer specifications; not independently tested.</p>
+      </div>
     </div>
   </section>
 
@@ -32,11 +41,18 @@ import PrinterTable from '../../components/PrinterTable.astro';
     <section class="article-section">
       <h2>What to verify before buying</h2>
       <ul>
-        <li>CUPS support or driverless printing support.</li>
+        <li>Whether the printer advertises IPP Everywhere/AirPrint to CUPS, or whether a vendor package is needed.</li>
         <li>Scanner support if you need all-in-one features.</li>
         <li>USB and local network printing without forced cloud setup.</li>
         <li>Whether the vendor publishes current Linux packages for your architecture.</li>
       </ul>
+    </section>
+
+    <section class="article-section">
+      <h2>Why the other three models are not Linux recommendations here</h2>
+      <p>
+        Brother's MFC-J4335DW U.S. page, the reviewed Epson ET-2850 user guide, and Canon's G3270 U.S. specification page do not provide the same explicit Linux compatibility evidence. Some may work through driverless protocols or separate regional packages, but protocol availability is not a substitute for verifying printing, scanning, maintenance, and the exact distribution. They remain in the general no-subscription guide, not this Linux recommendation.
+      </p>
     </section>
 
     <section class="article-section">

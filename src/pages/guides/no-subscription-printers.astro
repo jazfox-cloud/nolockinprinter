@@ -1,17 +1,17 @@
 ---
 import SiteLayout from '../../layouts/SiteLayout.astro';
-import PrinterTable from '../../components/PrinterTable.astro';
+import PrinterGuide from '../../components/PrinterGuide.astro';
 ---
 
 <SiteLayout
-  title="Best No-Subscription Printers"
+  title="No-Subscription Printer Evidence Guide"
   description="A practical guide to printers that do not require mandatory ink subscriptions, with notes on refillable tanks, toner, Linux support, and lock-in risk."
 >
   <div class="article">
     <p class="eyebrow" style="color: var(--amber);">Buyer guide</p>
-    <h1>Best no-subscription printers to research first.</h1>
+    <h1>Four no-subscription printer options, checked against official documents.</h1>
     <p class="lead">
-      A no-subscription printer should still work normally if you never join an ink plan. This first guide prioritizes ownership clarity over flashy app features.
+      “Subscription optional” is only one part of ownership. This guide also checks ordinary supplies, local connections, account boundaries, support material, and what the manufacturer does not promise.
     </p>
   </div>
 
@@ -19,30 +19,51 @@ import PrinterTable from '../../components/PrinterTable.astro';
     <div class="container">
       <div class="section-head">
         <div>
-          <p class="eyebrow" style="color: var(--amber);">Starter picks</p>
-          <h2>Models that fit the no-lock-in thesis</h2>
+          <p class="eyebrow" style="color: var(--amber);">Sourced model reviews</p>
+          <h2>Different strengths, different limits</h2>
         </div>
-        <p>These are research candidates for the local preview. Full production pages should add current price checks, exact cartridge numbers, and availability notes.</p>
+        <p>U.S. model documentation was last checked on July 22, 2026. These are editorial comparisons based on published specifications, not independently tested results or promises about future firmware.</p>
       </div>
-      <PrinterTable category="no-subscription" />
+      <PrinterGuide />
     </div>
   </section>
 
   <article class="article">
     <section class="article-section">
-      <h2>What “no subscription” should mean</h2>
+      <h2>Why buyers worry about subscriptions and accounts</h2>
       <p>
-        It should mean the printer is usable without a paid ink plan, cloud account dependency, or surprise feature loss when you cancel. Optional supply programs are less risky than printers whose value proposition depends on staying subscribed.
+        A low purchase price can hide a supply plan, a cloud-connected replenishment service, or cartridges that change behavior after cancellation. A printer may offer an optional plan while its normal retail supplies remain usable; another model variant may require an active plan. The exact model suffix and the type of cartridge or bottle matter more than a general “subscription-ready” label.
       </p>
     </section>
 
     <section class="article-section">
-      <h2>Buying checklist</h2>
+      <h2>USB, local network, mobile apps, and cloud printing are not the same</h2>
       <ul>
-        <li>Can it print over USB, local network, AirPrint, or CUPS without a vendor cloud account?</li>
-        <li>Are standard cartridges, toner, or refill bottles available from more than one retailer?</li>
-        <li>Do firmware updates affect third-party supplies or older cartridges?</li>
-        <li>Does the printer keep working if an optional ink subscription is canceled?</li>
+        <li><strong>USB</strong> is a direct computer-to-printer path. It reduces network dependence, but the setup software may still request an account.</li>
+        <li><strong>Local network printing</strong> uses Wi-Fi or Ethernet on your own network. IPP, AirPrint, Mopria, and LPR/LPD can support local jobs without sending the document through a vendor cloud.</li>
+        <li><strong>Mobile apps</strong> can be convenient for setup, scanning, and maintenance, but their account and telemetry requirements should be checked separately.</li>
+        <li><strong>Cloud printing</strong> enables remote jobs or scan-to-cloud features and normally adds an account, internet connection, and service-policy dependency.</li>
+      </ul>
+    </section>
+
+    <section class="article-section">
+      <h2>How the ownership checks work</h2>
+      <p>
+        Every model receives the same six evidence checks: subscription choice, basic use without a subscription, consumable transparency, local connection, long-term support material, and documentation completeness. “Documented” means a reviewed official source directly supports the point. “Mixed” means the useful path is documented but an important boundary remains unclear. “Not documented” would mean we found no adequate official support. We do not add these labels into a score or rank models by invented precision.
+      </p>
+    </section>
+
+    <section class="article-section">
+      <h2>Reusable pre-purchase checklist</h2>
+      <ul>
+        <li>Match the full model number and suffix on the box, retailer listing, support page, and manual.</li>
+        <li>Find the ordinary cartridge, toner, drum, or bottle part numbers before considering a subscription offer.</li>
+        <li>Read the cancellation terms: do plan cartridges stop working, and what must replace them?</li>
+        <li>Confirm at least one local path you can actually use: USB, Ethernet, Wi-Fi Direct, IPP, AirPrint, Mopria, or CUPS.</li>
+        <li>Check whether first-time setup, scanning, or maintenance requires an app or vendor account.</li>
+        <li>Open the current OS support page for your exact operating system and architecture.</li>
+        <li>Read the current warranty and return policy for your region; do not assume a U.S. term applies elsewhere.</li>
+        <li>Treat third-party supply compatibility as unknown unless the manufacturer documents it. Firmware, consumables, and policies can change after this page's verification date.</li>
       </ul>
     </section>
   </article>

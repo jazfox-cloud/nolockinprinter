@@ -21,7 +21,7 @@ ${pages
   .map(
     (page) => `  <url>
     <loc>https://nolockinprinter.com${page}</loc>
-    <lastmod>2026-07-08</lastmod>
+    <lastmod>2026-07-22</lastmod>
   </url>`,
   )
   .join('\n')}

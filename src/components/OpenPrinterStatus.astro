@@ -13,5 +13,10 @@ import openprinter from '../data/openprinter.json';
     <ul class="status-list">
       {openprinter.confirmedFacts.map((fact) => <li>{fact}</li>)}
     </ul>
+    <p class="evidence-note"><strong>Data boundary:</strong> {openprinter.dataBoundary}</p>
+    <h3>Project sources</h3>
+    <ul class="source-list">
+      {openprinter.officialLinks.map((link) => <li><a href={link.url}>{link.label}</a></li>)}
+    </ul>
   </div>
 </section>

@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Printer ownership workflow illustration</title>
+  <desc id="desc">An original abstract illustration of a printer connected to a computer and local network, with paper and refill bottles.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#073b3a"/>
+      <stop offset="1" stop-color="#116d65"/>
+    </linearGradient>
+    <linearGradient id="paper" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fffdf5"/>
+      <stop offset="1" stop-color="#e9e3d5"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="1310" cy="160" r="280" fill="#f0a53b" opacity=".16"/>
+  <circle cx="210" cy="780" r="340" fill="#52b7a9" opacity=".12"/>
+  <path d="M210 676h1180" stroke="#d9f1eb" stroke-width="10" opacity=".22"/>
+  <g stroke="#d9f1eb" stroke-width="8" fill="none" opacity=".7">
+    <path d="M500 315H320v120"/>
+    <path d="M1100 315h180v120"/>
+    <circle cx="320" cy="470" r="34"/>
+    <circle cx="1280" cy="470" r="34"/>
+    <path d="M292 470h56M320 442v56M1252 470h56"/>
+  </g>
+  <g transform="translate(500 170)">
+    <rect x="125" y="0" width="350" height="250" rx="18" fill="url(#paper)"/>
+    <path d="M175 70h250M175 115h190M175 160h225" stroke="#116d65" stroke-width="16" stroke-linecap="round" opacity=".5"/>
+    <rect x="0" y="185" width="600" height="330" rx="52" fill="#172b32"/>
+    <rect x="55" y="235" width="490" height="155" rx="24" fill="#2b4148"/>
+    <rect x="165" y="310" width="270" height="265" rx="16" fill="url(#paper)"/>
+    <path d="M215 385h170M215 430h130M215 475h150" stroke="#116d65" stroke-width="14" stroke-linecap="round" opacity=".62"/>
+    <circle cx="510" cy="220" r="13" fill="#52b7a9"/>
+    <circle cx="470" cy="220" r="13" fill="#f0a53b"/>
+  </g>
+  <g transform="translate(250 585)">
+    <rect width="90" height="150" rx="18" fill="#f0a53b"/>
+    <rect x="18" y="-25" width="54" height="35" rx="8" fill="#172b32"/>
+    <rect x="120" width="90" height="150" rx="18" fill="#52b7a9"/>
+    <rect x="138" y="-25" width="54" height="35" rx="8" fill="#172b32"/>
+  </g>
+  <g transform="translate(1150 590)">
+    <rect width="210" height="135" rx="20" fill="#e9e3d5"/>
+    <rect x="25" y="25" width="160" height="85" rx="10" fill="#116d65"/>
+    <path d="M60 67h90" stroke="#d9f1eb" stroke-width="10" stroke-linecap="round"/>
+  </g>
+</svg>

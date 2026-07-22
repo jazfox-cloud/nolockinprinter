@@ -1,10 +1,9 @@
 ---
 import SiteLayout from '../../layouts/SiteLayout.astro';
-import PrinterTable from '../../components/PrinterTable.astro';
 ---
 
 <SiteLayout
-  title="Best OpenPrinter Alternatives You Can Buy Now"
+  title="OpenPrinter Alternatives by Ownership Tradeoff"
   description="Practical OpenPrinter alternatives for buyers who want no mandatory ink subscription, lower lock-in risk, refillable ink, or Linux-friendly printing today."
 >
   <div class="article">
@@ -20,13 +19,19 @@ import PrinterTable from '../../components/PrinterTable.astro';
       <div class="section-head">
         <div>
           <p class="eyebrow" style="color: var(--amber);">Shortlist</p>
-          <h2>Current practical candidates</h2>
+          <h2>Choose by the tradeoff you actually need</h2>
         </div>
         <p>
-          This table is shared with the main buying guides, so the OpenPrinter traffic feeds the long-term printer database instead of becoming a dead-end topic.
+          OpenPrinter's goals cannot be reduced to “cheap ink.” These four documented products solve narrower problems today, while keeping their proprietary boundaries visible.
         </p>
       </div>
-      <PrinterTable />
+      <div class="decision-grid">
+        <article><h3>Refillable color + automatic duplex</h3><p><strong>Epson ET-2850</strong> is the documented match. Verify the model has no “U” suffix.</p></article>
+        <article><h3>Refillable color + dual-band Wi-Fi</h3><p><strong>Canon G3270</strong> documents 2.4/5 GHz Wi-Fi and Wireless Direct, but not automatic duplex.</p></article>
+        <article><h3>Color office functions</h3><p><strong>Brother MFC-J4335DW</strong> adds ADF, fax, and duplex, using LC406 cartridges rather than bottles.</p></article>
+        <article><h3>Linux + local text printing</h3><p><strong>Brother HL-L2460DW</strong> lists Linux, Ethernet, IPP/IPPS, and LPR/LPD; it is monochrome and print-only.</p></article>
+      </div>
+      <p class="evidence-note">These routes are based on manufacturer documents verified July 22, 2026. The products were not independently tested. See the <a href="/guides/no-subscription-printers/">full field-level reviews</a>.</p>
     </div>
   </section>
 
@@ -34,11 +39,18 @@ import PrinterTable from '../../components/PrinterTable.astro';
     <section class="article-section">
       <h2>How to choose an alternative</h2>
       <ul>
-        <li>For frequent color printing, start with refillable tank models and compare ink bottle pricing.</li>
-        <li>For text-heavy work, a monochrome laser printer is often the lowest-friction no-subscription choice.</li>
-        <li>For Linux, confirm CUPS, AirPrint, driverless printing, or vendor driver support before purchase.</li>
-        <li>For third-party ink or toner, check current reports before accepting a firmware update.</li>
+        <li><strong>Refillable color:</strong> compare the Epson ET-2850 and Canon G3270, then decide whether automatic duplex matters more than dual-band Wi-Fi.</li>
+        <li><strong>Color office functions:</strong> the Brother MFC-J4335DW adds fax and an automatic document feeder but uses proprietary LC406 cartridges rather than bottles.</li>
+        <li><strong>Linux and text:</strong> the Brother HL-L2460DW has the clearest official Linux and local-protocol evidence, but it is monochrome and print-only.</li>
+        <li><strong>Open hardware:</strong> none of these products is a substitute for an open design. They are conventional proprietary printers with different local-control and supply options.</li>
       </ul>
+    </section>
+
+    <section class="article-section">
+      <h2>What this comparison cannot promise</h2>
+      <p>
+        We did not independently test these printers. An optional subscription does not prove account-free setup, and local USB does not prove every maintenance function works without an app. Firmware, supported operating systems, consumable availability, and vendor policies can change. Use the detailed <a href="/guides/no-subscription-printers/">source register and buying checklist</a> immediately before purchase.
+      </p>
     </section>
   </article>
 </SiteLayout>

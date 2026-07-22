@@ -1,0 +1,120 @@
+---
+import printers from '../data/printers.json';
+
+interface Props {
+  slugs?: string[];
+  detail?: 'full' | 'summary';
+}
+
+const { slugs, detail = 'full' } = Astro.props;
+const selected = slugs
+  ? slugs.map((slug) => printers.find((printer) => printer.slug === slug)).filter(Boolean)
+  : printers;
+
+const sourceMap = (printer: (typeof printers)[number]) =>
+  Object.fromEntries(printer.sources.map((source) => [source.id, source]));
+---
+
+<div class="printer-list">
+  {selected.map((printer) => printer && (
+    <article class="printer-card" id={printer.slug}>
+      <div class="printer-card-header">
+        <div>
+          <p class="eyebrow">Manufacturer-document review</p>
+          <h2>{printer.name}</h2>
+        </div>
+        <div class="verified">Last verified: {printer.lastVerified}</div>
+      </div>
+      <p class="lead-small">{printer.summary}</p>
+      <p class="evidence-note"><strong>Evidence basis:</strong> {printer.evidenceBasis}</p>
+
+      <div class="fit-grid">
+        <section>
+          <h3>Good fit for</h3>
+          <p>{printer.bestFor}</p>
+        </section>
+        <section>
+          <h3>Not a good fit for</h3>
+          <p>{printer.notFor}</p>
+        </section>
+      </div>
+
+      <div class="fit-grid">
+        <section>
+          <h3>Advantages</h3>
+          <ul>{printer.pros.map((item) => <li>{item}</li>)}</ul>
+        </section>
+        <section>
+          <h3>Limitations</h3>
+          <ul>{printer.limitations.map((item) => <li>{item}</li>)}</ul>
+        </section>
+      </div>
+
+      <section class="no-lockin-analysis">
+        <h3>How it relates to “no lock-in”</h3>
+        <p>{printer.noLockInRelation}</p>
+      </section>
+
+      {detail === 'full' && (
+        <>
+          <div class="comparison-wrap specs-table">
+            <table>
+              <caption>Fields retained only where the reviewed manufacturer sources provide support.</caption>
+              <thead>
+                <tr><th>Field</th><th>Published information</th><th>Official source</th></tr>
+              </thead>
+              <tbody>
+                {printer.specs.map((spec) => (
+                  <tr>
+                    <th scope="row">{spec.label}</th>
+                    <td>{spec.value}</td>
+                    <td class="source-links">
+                      {spec.sources.map((sourceId, index) => {
+                        const source = sourceMap(printer)[sourceId];
+                        return source && <><a href={source.url}>{source.title}</a>{index < spec.sources.length - 1 ? '; ' : ''}</>;
+                      })}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          <section class="ownership-checks" aria-label={`${printer.name} ownership evidence checks`}>
+            <h3>Ownership evidence checks</h3>
+            <p class="muted">No total score is calculated. A “Mixed” result stays mixed instead of being converted into points.</p>
+            <div class="check-grid">
+              {printer.ownershipChecks.map((check) => (
+                <div class="check-item">
+                  <div class="check-heading">
+                    <strong>{check.label}</strong>
+                    <span class:list={['evidence-status', check.status.toLowerCase().replace(' ', '-')]}>{check.status}</span>
+                  </div>
+                  <p>{check.note}</p>
+                  <p class="source-links">
+                    {check.sources.map((sourceId, index) => {
+                      const source = sourceMap(printer)[sourceId];
+                      return source && <><a href={source.url}>{source.title}</a>{index < check.sources.length - 1 ? '; ' : ''}</>;
+                    })}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <section class="data-boundary">
+            <h3>Data boundary</h3>
+            <p>{printer.dataBoundary}</p>
+          </section>
+
+          <details class="source-register">
+            <summary>Official source register</summary>
+            <ul>
+              {printer.sources.map((source) => <li><a href={source.url}>{source.title}</a></li>)}
+            </ul>
+          </details>
+        </>
+      )}
+    </article>
+  ))}
+</div>

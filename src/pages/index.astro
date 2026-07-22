@@ -1,7 +1,6 @@
 ---
 import SiteLayout from '../layouts/SiteLayout.astro';
 import OpenPrinterStatus from '../components/OpenPrinterStatus.astro';
-import PrinterTable from '../components/PrinterTable.astro';
 ---
 
 <SiteLayout
@@ -9,26 +8,14 @@ import PrinterTable from '../components/PrinterTable.astro';
   description="Independent printer buying guides for avoiding ink subscriptions, cartridge lock-in, firmware surprises, and weak Linux support."
 >
   <section class="hero">
-    <picture>
-      <source
-        type="image/avif"
-        srcset="/images/hero-printer-960.avif 960w, /images/hero-printer-1754.avif 1754w"
-        sizes="100vw"
-      />
-      <source
-        type="image/webp"
-        srcset="/images/hero-printer-960.webp 960w, /images/hero-printer-1754.webp 1754w"
-        sizes="100vw"
-      />
-      <img
-        src="/images/og-printer.jpg"
-        width="1200"
-        height="630"
-        alt="A modern home office printer with refillable ink bottles on a desk"
-        fetchpriority="high"
-        decoding="async"
-      />
-    </picture>
+    <img
+      src="/images/printer-workflow.svg"
+      width="1600"
+      height="900"
+      alt="Illustration of a printer using local connections and refill supplies"
+      fetchpriority="high"
+      decoding="async"
+    />
     <div class="container">
       <div class="hero-content">
         <p class="eyebrow">Independent printer buying intelligence</p>
@@ -40,10 +27,6 @@ import PrinterTable from '../components/PrinterTable.astro';
           <a class="button" href="/guides/no-subscription-printers/">Start with buyer picks</a>
           <a class="button secondary" href="/openprinter/">Check OpenPrinter status</a>
         </div>
-        <form class="newsletter" aria-label="Email signup">
-          <input type="email" placeholder="Email for OpenPrinter launch and no-lock-in picks" aria-label="Email address" />
-          <button type="submit">Notify me</button>
-        </form>
       </div>
     </div>
   </section>
@@ -53,7 +36,7 @@ import PrinterTable from '../components/PrinterTable.astro';
       <div class="section-head">
         <div>
           <p class="eyebrow" style="color: var(--amber);">Two-track strategy</p>
-          <h2>Today’s safe buys, tomorrow’s open hardware.</h2>
+          <h2>Today’s documented choices, tomorrow’s open hardware.</h2>
         </div>
         <p>
           The site is built around a durable commercial core, with OpenPrinter used as a high-interest frontier topic rather than the whole business.
@@ -101,15 +84,15 @@ import PrinterTable from '../components/PrinterTable.astro';
       <OpenPrinterStatus />
       <div class="panel">
         <div class="panel-inner">
-          <p class="eyebrow" style="color: var(--amber);">Recommended first database</p>
-          <h2>Printer shortlist</h2>
+          <p class="eyebrow" style="color: var(--amber);">How the shortlist works</p>
+          <h2>Evidence before recommendations</h2>
           <p class="muted">
-            The first product table is deliberately small. Each model earns a place only if it supports the long-term anti-lock-in angle.
+            Four models are compared through the same six ownership questions. We do not convert unknowns into points or claim independently tested results.
           </p>
           <ul class="status-list">
-            <li>No mandatory ink subscription as the primary buying logic.</li>
-            <li>Reasonable path to cheaper ink, toner, or refillable supply.</li>
-            <li>Clear warnings where Linux support, third-party supplies, or firmware behavior need confirmation.</li>
+            <li>Can ordinary supplies be purchased outside a subscription?</li>
+            <li>Which USB, Ethernet, Wi-Fi Direct, or local protocols are documented?</li>
+            <li>What remains unknown about accounts, firmware, and third-party supplies?</li>
           </ul>
         </div>
       </div>
@@ -120,12 +103,20 @@ import PrinterTable from '../components/PrinterTable.astro';
     <div class="container">
       <div class="section-head">
         <div>
-          <p class="eyebrow" style="color: var(--amber);">MVP comparison table</p>
-          <h2>Printers worth researching first.</h2>
+          <p class="eyebrow" style="color: var(--amber);">Documented shortlist</p>
+          <h2>Four different ownership tradeoffs.</h2>
         </div>
-        <p>These are starter candidates, not final lab-tested rankings. The point is to preview the data-driven format.</p>
+        <p>Each summary is based on current U.S. manufacturer documents and states what we did not independently test.</p>
       </div>
-      <PrinterTable limit={4} />
+      <div class="grid-2 shortlist-grid">
+        <article class="card"><div class="card-body"><h3>Brother MFC-J4335DW</h3><p class="muted">Color office functions and ordinary LC406 cartridges alongside an optional subscription path.</p><a href="/guides/no-subscription-printers/#brother-mfc-j4335dw">Review the cartridge boundary</a></div></article>
+        <article class="card"><div class="card-body"><h3>Epson EcoTank ET-2850</h3><p class="muted">Refill tanks and automatic duplex; do not confuse the retail model with subscription-only ET-2850U.</p><a href="/guides/no-subscription-printers/#epson-ecotank-et-2850">Review the model distinction</a></div></article>
+        <article class="card"><div class="card-body"><h3>Canon PIXMA G3270</h3><p class="muted">Refillable GI-21 tanks and Wireless Direct, but simplex document printing and unclear account-free setup.</p><a href="/guides/no-subscription-printers/#canon-pixma-g3270">Review the documented limits</a></div></article>
+        <article class="card"><div class="card-body"><h3>Brother HL-L2460DW</h3><p class="muted">Monochrome laser with Ethernet, local protocols, and Linux explicitly listed by Brother.</p><a href="/guides/no-subscription-printers/#brother-hl-l2460dw">Review the Linux option</a></div></article>
+      </div>
+      <div class="actions">
+        <a class="button" href="/guides/no-subscription-printers/">Read the sourced buying guide</a>
+      </div>
     </div>
   </section>
 </SiteLayout>

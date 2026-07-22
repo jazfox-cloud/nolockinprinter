@@ -1,50 +1,197 @@
 [
   {
+    "slug": "brother-mfc-j4335dw",
     "name": "Brother INKvestment Tank MFC-J4335DW",
-    "category": ["no-subscription", "linux"],
-    "bestFor": "Home office users who want cartridge-based simplicity without a mandatory ink plan.",
-    "lockInScore": "Low",
-    "subscriptionRequired": "No",
-    "linuxNotes": "Brother publishes Linux drivers for many models; confirm exact model support before purchase.",
-    "inkModel": "High-yield cartridges",
-    "riskNotes": "Cartridges are still proprietary, but the ownership model is clearer than subscription-first printers.",
-    "ctaLabel": "Check current price",
-    "ctaUrl": "https://www.amazon.com/s?k=Brother+MFC-J4335DW"
+    "categories": ["no-subscription", "color", "all-in-one"],
+    "region": "United States",
+    "lastVerified": "2026-07-22",
+    "evidenceBasis": "Published Brother U.S. product, supplies, and Refresh subscription documentation. Not independently tested.",
+    "summary": "A color inkjet all-in-one that uses Brother LC406 cartridges and offers USB, Wi-Fi, and Wi-Fi Direct. Brother markets it as Refresh subscription-ready, but also sells ordinary LC406 cartridges for the model.",
+    "bestFor": "A home office that needs color, scanning, copying, fax, automatic two-sided printing, and a documented path to buy ordinary cartridges instead of joining a print plan.",
+    "notFor": "Buyers who want refill bottles, Ethernet, a manufacturer-documented Linux driver, or proof that third-party cartridges will keep working after future firmware changes.",
+    "pros": [
+      "Brother documents standard and high-yield LC406 replacement cartridges outside the Refresh program.",
+      "USB, Wi-Fi Direct, AirPrint, and Mopria provide several documented printing paths.",
+      "Automatic duplex printing and print/copy/scan/fax functions are documented."
+    ],
+    "limitations": [
+      "The official U.S. specification page lists Windows and macOS drivers, not Linux.",
+      "Refresh subscription cartridges may stop working after cancellation; Brother tells users to have non-Refresh cartridges ready.",
+      "No official source reviewed promises support for third-party ink or protection from future firmware restrictions."
+    ],
+    "noLockInRelation": "The relevant advantage is choice between documented retail LC406 cartridges and an optional Refresh plan—not freedom from a proprietary cartridge family. Local USB and Wi-Fi Direct reduce cloud dependence, but we did not verify first-time setup without an account.",
+    "dataBoundary": "Manufacturer documentation confirms interfaces, functions, consumables, warranty, and subscription behavior. We did not test setup, cancellation, firmware, print quality, yield, reliability, or non-Brother supplies.",
+    "specs": [
+      {"label": "Print technology / color", "value": "Color inkjet", "sources": ["brother-product"]},
+      {"label": "Functions", "value": "Print, copy, scan, and fax; color and black-and-white", "sources": ["brother-product"]},
+      {"label": "Automatic duplex", "value": "Yes, default; up to Letter size", "sources": ["brother-product"]},
+      {"label": "Connections", "value": "Hi-Speed USB 2.0, 802.11 b/g/n Wi-Fi, Wi-Fi Direct", "sources": ["brother-product"]},
+      {"label": "Mobile printing", "value": "AirPrint, Mopria, Brother Mobile Connect, Wi-Fi Direct", "sources": ["brother-product"]},
+      {"label": "Consumables", "value": "Brother LC406 standard or high-yield cartridges; separate black, cyan, magenta, and yellow", "sources": ["brother-supplies"]},
+      {"label": "Subscription", "value": "Refresh EZ Print is available by enrollment and can be cancelled; subscription cartridges may deactivate after cancellation, so non-Refresh cartridges are required to continue", "sources": ["brother-refresh"]},
+      {"label": "Non-subscription use", "value": "Standard LC406 cartridges are sold for this model; continued use without Refresh is documented through non-Refresh cartridges", "sources": ["brother-supplies", "brother-refresh"]},
+      {"label": "Official OS listing", "value": "Windows and macOS on the U.S. product page; Linux is not listed", "sources": ["brother-product"]},
+      {"label": "Warranty", "value": "2-year limited warranty listed for the U.S. product", "sources": ["brother-product"]}
+    ],
+    "ownershipChecks": [
+      {"label": "Subscription choice", "status": "Documented", "note": "Enrollment and cancellation are documented; ordinary cartridges are sold separately.", "sources": ["brother-refresh", "brother-supplies"]},
+      {"label": "Basic use without subscription", "status": "Documented", "note": "Brother directs cancelled subscribers to replace Refresh cartridges with non-Refresh cartridges.", "sources": ["brother-refresh"]},
+      {"label": "Consumable transparency", "status": "Documented", "note": "LC406 standard and high-yield families are identified.", "sources": ["brother-supplies"]},
+      {"label": "Local connection", "status": "Documented", "note": "USB and Wi-Fi Direct are listed.", "sources": ["brother-product"]},
+      {"label": "Long-term support material", "status": "Mixed", "note": "Product and support material exists, but future firmware and third-party supply behavior are not promised.", "sources": ["brother-product"]},
+      {"label": "Documentation completeness", "status": "Mixed", "note": "Core U.S. specifications are detailed; Linux support and account-free initial setup are not established.", "sources": ["brother-product"]}
+    ],
+    "sources": [
+      {"id": "brother-product", "title": "Brother MFC-J4335DW product and specifications", "url": "https://www.brother-usa.com/p/inkjet-printers/MFCJ4335DW"},
+      {"id": "brother-supplies", "title": "Brother LC406 standard-yield cartridge set", "url": "https://www.brother-usa.com/p/ink-toner/LC4064PKS"},
+      {"id": "brother-refresh", "title": "Brother Refresh EZ Print subscription information", "url": "https://www.brother-usa.com/ink-toner/learn-more/refresh-ez-print-subscription"}
+    ]
   },
   {
+    "slug": "epson-ecotank-et-2850",
     "name": "Epson EcoTank ET-2850",
-    "category": ["no-subscription", "refillable"],
-    "bestFor": "Households that print often and prefer refillable tanks over cartridges.",
-    "lockInScore": "Low",
-    "subscriptionRequired": "No",
-    "linuxNotes": "Epson has Linux driver coverage for many EcoTank models; verify distribution support.",
-    "inkModel": "Refillable ink tanks",
-    "riskNotes": "Lower ink cost, but maintenance and printhead care matter if the printer sits unused.",
-    "ctaLabel": "Check current price",
-    "ctaUrl": "https://www.amazon.com/s?k=Epson+EcoTank+ET-2850"
+    "categories": ["no-subscription", "refillable", "color", "all-in-one"],
+    "region": "United States",
+    "lastVerified": "2026-07-22",
+    "evidenceBasis": "Published Epson U.S. support documentation and ET-2850 user guide. Not independently tested.",
+    "summary": "A color inkjet all-in-one with refillable tanks, automatic two-sided printing, USB, Wi-Fi, Wi-Fi Direct, and a 100-sheet rear feeder.",
+    "bestFor": "A household that wants refill bottles instead of cartridges and can live with a rear paper feeder, flatbed scanner, and wireless rather than Ethernet networking.",
+    "notFor": "Buyers who need an automatic document feeder, Ethernet, a manufacturer-listed Linux package, or a guarantee about third-party ink and future firmware behavior.",
+    "pros": [
+      "The standard ET-2850 uses user-filled ink tanks rather than replaceable cartridges.",
+      "USB and Wi-Fi Direct provide documented local connection options.",
+      "Automatic two-sided printing, AirPrint, and a 100-sheet plain-paper capacity are documented."
+    ],
+    "limitations": [
+      "The scanner is flatbed-only and there is no automatic document feeder.",
+      "The reviewed U.S. user guide lists Windows and macOS requirements but does not list Linux.",
+      "ET-2850 and subscription-only ET-2850U are different products; marketplace listings must be checked carefully."
+    ],
+    "noLockInRelation": "The standard ET-2850 has a documented bottle-fill workflow and local interfaces. That is materially different from Epson ReadyPrint models ending in “U,” which Epson says require an active subscription. It still relies on Epson's tank design, software, and policies, and we found no official promise covering third-party ink.",
+    "dataBoundary": "The reviewed sources document the standard U.S. ET-2850, not ET-2850U. We did not test account-free setup, ink compatibility, print quality, maintenance, firmware, yield, or reliability.",
+    "specs": [
+      {"label": "Print technology / color", "value": "Color inkjet with refillable ink tanks", "sources": ["epson-guide", "epson-start"]},
+      {"label": "Functions", "value": "Print, copy, and flatbed scan", "sources": ["epson-guide"]},
+      {"label": "Automatic duplex", "value": "Yes for supported paper types and sizes", "sources": ["epson-guide"]},
+      {"label": "Connections", "value": "Hi-Speed USB, 802.11 b/g/n Wi-Fi, Wi-Fi Direct", "sources": ["epson-guide", "epson-network"]},
+      {"label": "Mobile / remote printing", "value": "AirPrint plus optional Epson Connect cloud services; Wi-Fi Direct is also documented", "sources": ["epson-guide"]},
+      {"label": "Paper capacity", "value": "Up to 100 sheets of Letter/A4 plain paper in the rear feeder", "sources": ["epson-guide"]},
+      {"label": "Consumables", "value": "Bottle-filled black, cyan, magenta, and yellow ink tanks", "sources": ["epson-start"]},
+      {"label": "Subscription", "value": "No subscription requirement is stated for the standard ET-2850; Epson identifies models ending in “U,” including ET-2850U, as ReadyPrint subscription devices", "sources": ["epson-support", "epson-readyprint"]},
+      {"label": "Official OS listing", "value": "Windows and macOS in the reviewed user guide; Linux is not listed", "sources": ["epson-guide"]},
+      {"label": "Warranty", "value": "Epson publishes separate U.S. warranty statements based on purchase date; consult the current statement on the support page", "sources": ["epson-support"]}
+    ],
+    "ownershipChecks": [
+      {"label": "Subscription choice", "status": "Documented", "note": "Epson distinguishes the retail ET-2850 from subscription-only U-series hardware.", "sources": ["epson-support", "epson-readyprint"]},
+      {"label": "Basic use without subscription", "status": "Documented", "note": "The standard model guide documents bottle filling and local printing without describing a plan requirement.", "sources": ["epson-guide", "epson-start"]},
+      {"label": "Consumable transparency", "status": "Mixed", "note": "The four tank colors and fill workflow are clear; third-party ink support is not promised.", "sources": ["epson-start"]},
+      {"label": "Local connection", "status": "Documented", "note": "USB and Wi-Fi Direct are listed.", "sources": ["epson-guide", "epson-network"]},
+      {"label": "Long-term support material", "status": "Documented", "note": "Epson maintains a product support page, user guide, downloads, and date-specific warranty documents.", "sources": ["epson-support", "epson-guide"]},
+      {"label": "Documentation completeness", "status": "Mixed", "note": "Core hardware and network behavior are covered; Linux and account-free first setup are not established.", "sources": ["epson-guide"]}
+    ],
+    "sources": [
+      {"id": "epson-support", "title": "Epson ET-2850 official support", "url": "https://epson.com/Support/Printers/All-In-Ones/ET-Series/Epson-ET-2850/s/SPT_C11CJ63202"},
+      {"id": "epson-guide", "title": "Epson ET-2850 User's Guide", "url": "https://files.support.epson.com/docid/cpd6/cpd60206.pdf"},
+      {"id": "epson-start", "title": "Epson ET-2850 Start Here guide", "url": "https://files.support.epson.com/docid/cpd6/cpd60021.pdf"},
+      {"id": "epson-network", "title": "Epson ET-2850 network interface specifications", "url": "https://files.support.epson.com/docid/cpd6/cpd60206/source/specifications/references/et2850_l4260/spex_network_interface_et2850_l4260.html"},
+      {"id": "epson-readyprint", "title": "Epson ReadyPrint printer plans and U-series warning", "url": "https://readyprint.epson.com/"}
+    ]
   },
   {
-    "name": "Canon MegaTank G3270",
-    "category": ["no-subscription", "refillable"],
-    "bestFor": "Budget buyers who want refillable ink tanks and basic home printing.",
-    "lockInScore": "Medium",
-    "subscriptionRequired": "No",
-    "linuxNotes": "Linux support varies by region and driver package; check before buying.",
-    "inkModel": "Refillable ink tanks",
-    "riskNotes": "Good ink economics, but software and driver support can be less predictable.",
-    "ctaLabel": "Check current price",
-    "ctaUrl": "https://www.amazon.com/s?k=Canon+MegaTank+G3270"
+    "slug": "canon-pixma-g3270",
+    "name": "Canon MegaTank PIXMA G3270",
+    "categories": ["no-subscription", "refillable", "color", "all-in-one"],
+    "region": "United States",
+    "lastVerified": "2026-07-22",
+    "evidenceBasis": "Published Canon U.S. product specifications and support documentation. Not independently tested.",
+    "summary": "A color MegaTank all-in-one with refillable GI-21 bottles, USB, dual-band Wi-Fi, Wireless Direct, a flatbed scanner, and a 100-sheet rear tray.",
+    "bestFor": "A home user who values refillable tanks, straightforward print/copy/scan functions, dual-band Wi-Fi, and Wireless Direct more than speed or automatic duplexing.",
+    "notFor": "Buyers who need automatic two-sided printing, an automatic document feeder, Ethernet, or official proof of unrestricted third-party ink use.",
+    "pros": [
+      "Canon identifies the GI-21 bottle family and fill volumes in its U.S. specifications.",
+      "USB, 2.4/5 GHz Wi-Fi, and Wireless Direct are documented.",
+      "AirPrint, Mopria, Canon PRINT, and Chromebook compatibility are listed."
+    ],
+    "limitations": [
+      "Document printing is simplex only; automatic duplex is not listed.",
+      "Scanning is single-sided flatbed only, with no automatic document feeder.",
+      "Canon labels the printer ARS-capable, but this does not prove the printer is free of every account, app, or platform dependency."
+    ],
+    "noLockInRelation": "Refillable GI-21 bottles and local USB/Wireless Direct paths reduce reliance on cartridge subscriptions and cloud printing. The printer remains tied to a specific ink system and Canon software ecosystem; no reviewed official source guarantees third-party ink compatibility or permanent policy behavior.",
+    "dataBoundary": "Canon's U.S. specifications support the listed hardware facts. We did not test setup, ARS enrollment, account requirements, ink compatibility, firmware, print quality, yield, or reliability.",
+    "specs": [
+      {"label": "Print technology / color", "value": "Color inkjet with four-color continuous ink supply system", "sources": ["canon-support"]},
+      {"label": "Functions", "value": "Print, copy, and single-sided flatbed scan", "sources": ["canon-support"]},
+      {"label": "Print speed", "value": "Approx. 11.0 ipm black and 6.0 ipm color, Letter simplex ESAT", "sources": ["canon-support"]},
+      {"label": "Automatic duplex", "value": "No; document printing capability is listed as simplex", "sources": ["canon-support"]},
+      {"label": "Connections", "value": "Hi-Speed USB, 2.4/5 GHz Wi-Fi, Wireless Direct", "sources": ["canon-support"]},
+      {"label": "Mobile printing", "value": "AirPrint, Mopria, Canon PRINT, Canon Print Service", "sources": ["canon-support"]},
+      {"label": "Paper capacity", "value": "100 sheets of plain paper in rear tray", "sources": ["canon-support"]},
+      {"label": "Consumables", "value": "GI-21 pigment black plus GI-21 cyan, magenta, and yellow dye ink bottles", "sources": ["canon-support"]},
+      {"label": "Subscription / replenishment", "value": "Automatic Replenishment System capable; the reviewed page does not state that ARS is required", "sources": ["canon-support", "canon-ars"]},
+      {"label": "Official OS / protocol listing", "value": "Windows, macOS, iOS/iPadOS, Android, and Chromebook; AirPrint and Mopria", "sources": ["canon-support"]},
+      {"label": "Warranty", "value": "1-year limited warranty with InstantExchange Program in the U.S.", "sources": ["canon-support"]}
+    ],
+    "ownershipChecks": [
+      {"label": "Subscription choice", "status": "Mixed", "note": "ARS capability is listed, but the product page does not fully explain the non-ARS setup boundary.", "sources": ["canon-support", "canon-ars"]},
+      {"label": "Basic use without subscription", "status": "Mixed", "note": "The specifications document ordinary GI-21 bottles and local interfaces, but we did not find an explicit account-free setup promise.", "sources": ["canon-support"]},
+      {"label": "Consumable transparency", "status": "Documented", "note": "GI-21 colors, ink types, and fill volumes are specified.", "sources": ["canon-support"]},
+      {"label": "Local connection", "status": "Documented", "note": "USB and Wireless Direct are listed.", "sources": ["canon-support"]},
+      {"label": "Long-term support material", "status": "Documented", "note": "Canon maintains specifications, downloads, manuals, and warranty links on one support page.", "sources": ["canon-support"]},
+      {"label": "Documentation completeness", "status": "Mixed", "note": "Hardware details are strong; Linux and account-free first setup are not established.", "sources": ["canon-support"]}
+    ],
+    "sources": [
+      {"id": "canon-support", "title": "Canon support and technical specifications for PIXMA G3270", "url": "https://www.usa.canon.com/support/p/pixma-g3270"},
+      {"id": "canon-ars", "title": "Canon Automatic Replenishment Service information", "url": "https://www.usa.canon.com/ink-paper-toner/printer-ink-subscription-plans/ink-and-toner-cartridge-automatic-replenishment-service"}
+    ]
   },
   {
+    "slug": "brother-hl-l2460dw",
     "name": "Brother HL-L2460DW",
-    "category": ["no-subscription", "linux", "laser"],
-    "bestFor": "Text-heavy printing with low fuss and no color ink maintenance.",
-    "lockInScore": "Low",
-    "subscriptionRequired": "No",
-    "linuxNotes": "Brother laser printers are commonly used with Linux, CUPS, AirPrint, and driverless setups.",
-    "inkModel": "Toner cartridge",
-    "riskNotes": "Black-and-white only; check toner chip behavior and third-party toner compatibility.",
-    "ctaLabel": "Check current price",
-    "ctaUrl": "https://www.amazon.com/s?k=Brother+HL-L2460DW"
+    "categories": ["no-subscription", "linux", "laser", "monochrome"],
+    "region": "United States",
+    "lastVerified": "2026-07-22",
+    "evidenceBasis": "Published Brother U.S. product specifications and brochure. Not independently tested.",
+    "summary": "A monochrome laser printer with automatic duplex, Ethernet, USB, dual-band Wi-Fi, Wi-Fi Direct, a 250-sheet tray, and official Windows, macOS, Linux, and ChromeOS compatibility listings.",
+    "bestFor": "A text-heavy home office that wants wired or local-network printing, automatic duplex, Linux listed by the manufacturer, and no need for color, scanning, or copying.",
+    "notFor": "Anyone who needs color, scanning, copying, fax, or evidence that third-party toner will remain accepted after every firmware update.",
+    "pros": [
+      "Brother explicitly lists Linux compatibility and common local network protocols including IPP/IPPS and LPR/LPD.",
+      "Ethernet, USB, dual-band Wi-Fi, and Wi-Fi Direct offer several local connection paths.",
+      "Automatic duplex, a 250-sheet tray, and separate toner and drum supplies are documented."
+    ],
+    "limitations": [
+      "It prints black and white only and has no scanner or copier.",
+      "Toner and drum are proprietary Brother supply families.",
+      "No reviewed official source promises third-party toner compatibility or unchanged firmware behavior."
+    ],
+    "noLockInRelation": "The strongest ownership case is documented Linux support, Ethernet/USB/local protocols, and ordinary TN830-family toner plus DR830 drum supplies. Refresh is available on eligible Brother hardware, but subscription cartridges have separate cancellation rules; this page does not treat subscription eligibility as freedom from supply lock-in.",
+    "dataBoundary": "Manufacturer documents hardware, protocols, OS compatibility, supplies, and warranty. We did not test driverless discovery, distribution-specific scanning (there is no scanner), firmware, third-party toner, page yield, print quality, or reliability.",
+    "specs": [
+      {"label": "Print technology / color", "value": "Electrophotographic monochrome laser", "sources": ["brother-hl-product", "brother-hl-brochure"]},
+      {"label": "Functions", "value": "Print only", "sources": ["brother-hl-product"]},
+      {"label": "Print speed", "value": "Up to 36 ppm black", "sources": ["brother-hl-product"]},
+      {"label": "Automatic duplex", "value": "Yes, enabled by default", "sources": ["brother-hl-product"]},
+      {"label": "Connections", "value": "Hi-Speed USB 2.0, Ethernet, 2.4/5 GHz Wi-Fi, Wi-Fi Direct", "sources": ["brother-hl-product"]},
+      {"label": "Mobile / local protocols", "value": "AirPrint, Mopria, Brother Mobile Connect, IPP/IPPS, LPR/LPD, mDNS, and Port 9100 among listed protocols", "sources": ["brother-hl-product"]},
+      {"label": "Paper capacity", "value": "250-sheet standard tray plus single-sheet manual feed", "sources": ["brother-hl-brochure"]},
+      {"label": "Consumables", "value": "TN830, TN830XL, or TN830V toner; DR830 drum", "sources": ["brother-hl-brochure"]},
+      {"label": "Subscription", "value": "Brother Refresh is a separate enrollment service; cancellation may require replacing Refresh cartridges with non-Refresh supplies", "sources": ["brother-refresh"]},
+      {"label": "Official OS listing", "value": "Windows, macOS, Linux, and ChromeOS", "sources": ["brother-hl-product"]},
+      {"label": "Warranty", "value": "1-year limited warranty in the U.S.", "sources": ["brother-hl-product"]}
+    ],
+    "ownershipChecks": [
+      {"label": "Subscription choice", "status": "Documented", "note": "Refresh requires enrollment; ordinary toner families are separately documented.", "sources": ["brother-refresh", "brother-hl-brochure"]},
+      {"label": "Basic use without subscription", "status": "Documented", "note": "The product ships with a starter toner and documents ordinary TN830-family replacements.", "sources": ["brother-hl-brochure"]},
+      {"label": "Consumable transparency", "status": "Documented", "note": "Toner and separate drum part families are identified.", "sources": ["brother-hl-brochure"]},
+      {"label": "Local connection", "status": "Documented", "note": "USB, Ethernet, Wi-Fi Direct, IPP/IPPS, and LPR/LPD are listed.", "sources": ["brother-hl-product"]},
+      {"label": "Long-term support material", "status": "Mixed", "note": "Product, protocol, driver, and supply documents exist; third-party toner and future firmware behavior are not promised.", "sources": ["brother-hl-product", "brother-hl-brochure"]},
+      {"label": "Documentation completeness", "status": "Documented", "note": "Core hardware, protocols, Linux compatibility, supplies, and warranty are all covered by official U.S. sources.", "sources": ["brother-hl-product", "brother-hl-brochure"]}
+    ],
+    "sources": [
+      {"id": "brother-hl-product", "title": "Brother HL-L2460DW product and specifications", "url": "https://www.brother-usa.com/p/laser-printers/HLL2460DW"},
+      {"id": "brother-hl-brochure", "title": "Brother HL-L2460DW official brochure", "url": "https://www.brother-usa.com/-/media/brother/product-catalog-media/documents/2023/12/14/21/53/hl-l2460dw_brochure.pdf"},
+      {"id": "brother-refresh", "title": "Brother Refresh EZ Print subscription information", "url": "https://www.brother-usa.com/ink-toner/learn-more/refresh-ez-print-subscription"}
+    ]
   }
 ]
