@@ -17,6 +17,7 @@ const {
 const siteUrl = 'https://nolockinprinter.com';
 const canonicalUrl = canonical === false ? undefined : new URL(canonical, siteUrl).toString();
 const pageTitle = title.includes('No Lock-In Printer') ? title : `${title} | No Lock-In Printer`;
+const isIndexable = !robots.toLowerCase().includes('noindex');
 ---
 
 <!doctype html>
@@ -27,6 +28,7 @@ const pageTitle = title.includes('No Lock-In Printer') ? title : `${title} | No 
     <title>{pageTitle}</title>
     <meta name="description" content={description} />
     <meta name="robots" content={robots} />
+    <meta name="google-adsense-account" content="ca-pub-2134598094429002" />
     <meta name="theme-color" content="#116d65" />
     {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
     <meta property="og:title" content={pageTitle} />
@@ -39,6 +41,16 @@ const pageTitle = title.includes('No Lock-In Printer') ? title : `${title} | No 
     <meta property="og:image:type" content="image/svg+xml" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:image" content={`${siteUrl}/images/printer-workflow.svg`} />
+    {
+      isIndexable && (
+        <script
+          is:inline
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2134598094429002"
+          crossorigin="anonymous"
+        />
+      )
+    }
   </head>
   <body>
     <header class="site-header">
