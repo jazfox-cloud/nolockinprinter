@@ -215,11 +215,15 @@ const isIndexable = !robots.toLowerCase().includes('noindex');
           button.addEventListener('click', showBanner);
         });
 
-        document.addEventListener('click', (event) => {
+        function trackContentClick(event) {
+          if (event.analyticsContentTracked) {
+            return;
+          }
           const link = event.target instanceof Element ? event.target.closest('[data-analytics-content]') : null;
           if (!link || getChoice() !== 'analytics_granted' || !isProductionHost) {
             return;
           }
+          event.analyticsContentTracked = true;
           const href = link instanceof HTMLAnchorElement ? link.href : '';
           const shouldDelayNavigation =
             href &&
@@ -252,7 +256,12 @@ const isIndexable = !robots.toLowerCase().includes('noindex');
           if (shouldDelayNavigation) {
             window.setTimeout(continueNavigation, 1200);
           }
-        }, { capture: true });
+        }
+
+        document.addEventListener('click', trackContentClick, { capture: true });
+        document.querySelectorAll('[data-analytics-content]').forEach((link) => {
+          link.addEventListener('click', trackContentClick, { capture: true });
+        });
 
         const choice = getChoice();
         if (choice === 'analytics_granted') {
