@@ -220,13 +220,38 @@ const isIndexable = !robots.toLowerCase().includes('noindex');
           if (!link || getChoice() !== 'analytics_granted' || !isProductionHost) {
             return;
           }
+          const href = link instanceof HTMLAnchorElement ? link.href : '';
+          const shouldDelayNavigation =
+            href &&
+            link.target !== '_blank' &&
+            event.button === 0 &&
+            !event.metaKey &&
+            !event.ctrlKey &&
+            !event.shiftKey &&
+            !event.altKey;
+          let navigated = false;
+          const continueNavigation = () => {
+            if (!shouldDelayNavigation || navigated) {
+              return;
+            }
+            navigated = true;
+            window.location.href = href;
+          };
+          if (shouldDelayNavigation) {
+            event.preventDefault();
+          }
           ensureGtag();
           gtag('event', 'select_content', {
             content_type: link.getAttribute('data-analytics-content') || 'content_card',
             content_slug: link.getAttribute('data-analytics-slug') || 'unknown',
             placement: link.getAttribute('data-analytics-placement') || 'body',
-            transport_type: 'beacon'
+            transport_type: 'beacon',
+            event_callback: continueNavigation,
+            event_timeout: 1000
           });
+          if (shouldDelayNavigation) {
+            window.setTimeout(continueNavigation, 1200);
+          }
         });
 
         const choice = getChoice();
