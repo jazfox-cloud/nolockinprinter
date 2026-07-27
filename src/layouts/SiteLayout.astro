@@ -252,7 +252,7 @@ const isIndexable = !robots.toLowerCase().includes('noindex');
           if (shouldDelayNavigation) {
             window.setTimeout(continueNavigation, 1200);
           }
-        });
+        }, { capture: true });
 
         const choice = getChoice();
         if (choice === 'analytics_granted') {
