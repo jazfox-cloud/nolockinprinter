@@ -41,6 +41,18 @@ const isIndexable = !robots.toLowerCase().includes('noindex');
     <meta property="og:image:type" content="image/svg+xml" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:image" content={`${siteUrl}/images/printer-workflow.svg`} />
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      window.gtag = gtag;
+      gtag('consent', 'default', {
+        analytics_storage: 'denied',
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
+        wait_for_update: 500
+      });
+    </script>
     {
       isIndexable && (
         <script
@@ -82,9 +94,151 @@ const isIndexable = !robots.toLowerCase().includes('noindex');
           <a href="/editorial-policy/">Editorial policy</a>
           <a href="/affiliate-disclosure/">Affiliate disclosure</a>
           <a href="/privacy/">Privacy</a>
+          <button class="privacy-choice-button" type="button" data-analytics-choices>Analytics choices</button>
           <a href="/terms/">Terms</a>
         </div>
       </div>
     </footer>
+    <div class="analytics-consent" data-analytics-consent hidden>
+      <div class="analytics-consent__panel" role="dialog" aria-live="polite" aria-label="Analytics choices">
+        <div>
+          <strong>Analytics choices</strong>
+          <p>No Lock-In Printer uses Google Analytics 4 only after you allow analytics. Ad choices stay separate.</p>
+        </div>
+        <div class="analytics-consent__actions">
+          <button type="button" class="button secondary" data-analytics-reject>Reject</button>
+          <button type="button" class="button" data-analytics-accept>Allow analytics</button>
+        </div>
+      </div>
+    </div>
+    <script is:inline>
+      (() => {
+        const measurementId = 'G-SF2QJEJ57G';
+        const productionHost = 'nolockinprinter.com';
+        const storageKey = 'nolockinprinter_analytics_consent';
+        const isProductionHost = window.location.hostname === productionHost;
+        const banner = document.querySelector('[data-analytics-consent]');
+        const choicesButtons = document.querySelectorAll('[data-analytics-choices]');
+        let gtagLoaded = false;
+        let configured = false;
+
+        function gtag() {
+          window.dataLayer = window.dataLayer || [];
+          window.dataLayer.push(arguments);
+        }
+
+        function ensureGtag() {
+          window.dataLayer = window.dataLayer || [];
+          window.gtag = gtag;
+        }
+
+        function updateConsent(analyticsStorage) {
+          ensureGtag();
+          gtag('consent', 'update', {
+            analytics_storage: analyticsStorage,
+            ad_storage: 'denied',
+            ad_user_data: 'denied',
+            ad_personalization: 'denied'
+          });
+        }
+
+        function loadGtag() {
+          if (!isProductionHost || gtagLoaded || document.querySelector(`script[src*="googletagmanager.com/gtag/js?id=${measurementId}"]`)) {
+            return;
+          }
+          gtagLoaded = true;
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = `https://www.googletagmanager.com/gtag/js?id=${measurementId}`;
+          document.head.appendChild(script);
+        }
+
+        function configureAnalytics() {
+          if (!isProductionHost || configured) {
+            return;
+          }
+          configured = true;
+          ensureGtag();
+          gtag('js', new Date());
+          gtag('config', measurementId, {
+            anonymize_ip: true,
+            allow_google_signals: false,
+            allow_ad_personalization_signals: false
+          });
+          loadGtag();
+        }
+
+        function hideBanner() {
+          if (banner) {
+            banner.hidden = true;
+          }
+        }
+
+        function showBanner() {
+          if (banner) {
+            banner.hidden = false;
+          }
+        }
+
+        function acceptAnalytics() {
+          try {
+            window.localStorage.setItem(storageKey, 'analytics_granted');
+          } catch {}
+          updateConsent('granted');
+          configureAnalytics();
+          hideBanner();
+        }
+
+        function rejectAnalytics() {
+          try {
+            window.localStorage.setItem(storageKey, 'denied');
+          } catch {}
+          updateConsent('denied');
+          hideBanner();
+        }
+
+        function getChoice() {
+          try {
+            return window.localStorage.getItem(storageKey);
+          } catch {
+            return null;
+          }
+        }
+
+        document.querySelectorAll('[data-analytics-accept]').forEach((button) => {
+          button.addEventListener('click', acceptAnalytics);
+        });
+        document.querySelectorAll('[data-analytics-reject]').forEach((button) => {
+          button.addEventListener('click', rejectAnalytics);
+        });
+        choicesButtons.forEach((button) => {
+          button.addEventListener('click', showBanner);
+        });
+
+        document.addEventListener('click', (event) => {
+          const link = event.target instanceof Element ? event.target.closest('[data-analytics-content]') : null;
+          if (!link || getChoice() !== 'analytics_granted' || !isProductionHost) {
+            return;
+          }
+          ensureGtag();
+          gtag('event', 'select_content', {
+            content_type: link.getAttribute('data-analytics-content') || 'content_card',
+            content_slug: link.getAttribute('data-analytics-slug') || 'unknown',
+            placement: link.getAttribute('data-analytics-placement') || 'body',
+            transport_type: 'beacon'
+          });
+        });
+
+        const choice = getChoice();
+        if (choice === 'analytics_granted') {
+          updateConsent('granted');
+          configureAnalytics();
+        } else if (choice === 'denied') {
+          updateConsent('denied');
+        } else {
+          showBanner();
+        }
+      })();
+    </script>
   </body>
 </html>
