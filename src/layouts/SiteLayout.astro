@@ -269,6 +269,7 @@ const isIndexable = !robots.toLowerCase().includes('noindex');
           const fallback = window.setTimeout(navigate, 700);
           ensureGtag();
           window.gtag('event', 'select_content', {
+            send_to: measurementId,
             content_type: link.getAttribute('data-analytics-content') || 'content_card',
             content_slug: link.getAttribute('data-analytics-slug') || 'unknown',
             placement: link.getAttribute('data-analytics-placement') || 'body',

@@ -163,6 +163,7 @@ function runClick(harness, event) {
   assert(command[2].content_type === 'printer_card', 'Expected low-cardinality content_type.');
   assert(command[2].content_slug === 'brother-mfc-j4335dw', 'Expected low-cardinality content_slug.');
   assert(command[2].placement === 'home_shortlist', 'Expected low-cardinality placement.');
+  assert(command[2].send_to === 'G-SF2QJEJ57G', 'Expected select_content to target the GA4 stream explicitly.');
   assert(command[2].transport_type === 'beacon', 'Expected beacon transport.');
   assert(command[2].event_timeout === 500, 'Expected short GA event timeout.');
   assert(harness.timers.length === 1 && harness.timers[0].ms === 700, 'Expected one short fallback timer.');
