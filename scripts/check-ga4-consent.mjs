@@ -54,6 +54,11 @@ assert(layout.includes("ad_personalization: 'denied'"), 'Ad personalization must
 assert(layout.includes('googletagmanager.com/gtag/js'), 'GA4 loader is missing.');
 assert(layout.includes('select_content'), 'select_content event tracking is missing.');
 assert(layout.includes('content_slug'), 'select_content must use content_slug.');
+assert(layout.includes("window.gtag('event', 'select_content'"), 'Content click tracking must call the active window.gtag.');
+assert(layout.includes("document.addEventListener('click', trackContentClick, { capture: true })"), 'Content tracking should use one delegated click entrypoint.');
+assert(!layout.includes("querySelectorAll('[data-analytics-content]').forEach"), 'Do not bind duplicate per-link content click handlers.');
+assert(layout.includes('window.location.assign(url)'), 'Tracked navigation should use controlled window.location.assign.');
+assert(layout.includes('event_timeout: 500'), 'Tracked navigation should use a short GA event timeout.');
 assert(!layout.includes('newsletter_signup'), 'Do not emit newsletter_signup without a real successful newsletter backend.');
 assert(!layout.includes('comparison_start'), 'Do not emit comparison_start for static comparison content.');
 

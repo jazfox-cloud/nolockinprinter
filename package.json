@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "ASTRO_TELEMETRY_DISABLED=1 astro dev --host 127.0.0.1",
     "build": "ASTRO_TELEMETRY_DISABLED=1 astro check && ASTRO_TELEMETRY_DISABLED=1 astro build",
-    "check:ga4": "node scripts/check-ga4-consent.mjs",
+    "check:ga4": "node scripts/check-ga4-consent.mjs && node scripts/test-ga4-navigation.mjs",
     "preview": "ASTRO_TELEMETRY_DISABLED=1 astro preview --host 127.0.0.1"
   },
   "dependencies": {

@@ -215,6 +215,34 @@ const isIndexable = !robots.toLowerCase().includes('noindex');
           button.addEventListener('click', showBanner);
         });
 
+        function navigateOnce(url) {
+          let navigated = false;
+          return () => {
+            if (navigated) {
+              return;
+            }
+            navigated = true;
+            window.location.assign(url);
+          };
+        }
+
+        function isPlainSameOriginContentNavigation(event, link) {
+          if (!(link instanceof HTMLAnchorElement) || !link.href || link.download) {
+            return false;
+          }
+          if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) {
+            return false;
+          }
+          if (link.target && link.target !== '_self') {
+            return false;
+          }
+          const url = new URL(link.href, window.location.href);
+          if (!['http:', 'https:'].includes(url.protocol) || url.origin !== window.location.origin) {
+            return false;
+          }
+          return !(url.pathname === window.location.pathname && url.search === window.location.search && url.hash);
+        }
+
         function trackContentClick(event) {
           if (event.analyticsContentTracked) {
             return;
@@ -224,44 +252,27 @@ const isIndexable = !robots.toLowerCase().includes('noindex');
             return;
           }
           event.analyticsContentTracked = true;
-          const href = link instanceof HTMLAnchorElement ? link.href : '';
-          const shouldDelayNavigation =
-            href &&
-            link.target !== '_blank' &&
-            event.button === 0 &&
-            !event.metaKey &&
-            !event.ctrlKey &&
-            !event.shiftKey &&
-            !event.altKey;
-          let navigated = false;
-          const continueNavigation = () => {
-            if (!shouldDelayNavigation || navigated) {
-              return;
-            }
-            navigated = true;
-            window.location.href = href;
-          };
-          if (shouldDelayNavigation) {
-            event.preventDefault();
+          if (!isPlainSameOriginContentNavigation(event, link)) {
+            return;
           }
+          event.preventDefault();
+          const navigate = navigateOnce(link.href);
+          const fallback = window.setTimeout(navigate, 700);
           ensureGtag();
-          gtag('event', 'select_content', {
+          window.gtag('event', 'select_content', {
             content_type: link.getAttribute('data-analytics-content') || 'content_card',
             content_slug: link.getAttribute('data-analytics-slug') || 'unknown',
             placement: link.getAttribute('data-analytics-placement') || 'body',
             transport_type: 'beacon',
-            event_callback: continueNavigation,
-            event_timeout: 1000
+            event_callback: () => {
+              window.clearTimeout(fallback);
+              navigate();
+            },
+            event_timeout: 500
           });
-          if (shouldDelayNavigation) {
-            window.setTimeout(continueNavigation, 1200);
-          }
         }
 
         document.addEventListener('click', trackContentClick, { capture: true });
-        document.querySelectorAll('[data-analytics-content]').forEach((link) => {
-          link.addEventListener('click', trackContentClick, { capture: true });
-        });
 
         const choice = getChoice();
         if (choice === 'analytics_granted') {
