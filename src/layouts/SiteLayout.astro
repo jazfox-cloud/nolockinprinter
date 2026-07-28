@@ -226,6 +226,15 @@ const isIndexable = !robots.toLowerCase().includes('noindex');
           };
         }
 
+        function getTrackingLink(target) {
+          const elementTarget = target instanceof Element
+            ? target
+            : target?.parentElement instanceof Element
+              ? target.parentElement
+              : null;
+          return elementTarget?.closest('[data-analytics-content]') || null;
+        }
+
         function isPlainSameOriginContentNavigation(event, link) {
           if (!(link instanceof HTMLAnchorElement) || !link.href || link.download) {
             return false;
@@ -247,7 +256,7 @@ const isIndexable = !robots.toLowerCase().includes('noindex');
           if (event.analyticsContentTracked) {
             return;
           }
-          const link = event.target instanceof Element ? event.target.closest('[data-analytics-content]') : null;
+          const link = getTrackingLink(event.target);
           if (!link || getChoice() !== 'analytics_granted' || !isProductionHost) {
             return;
           }

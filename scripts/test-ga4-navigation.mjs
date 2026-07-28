@@ -130,6 +130,10 @@ function createEvent(link, overrides = {}) {
   };
 }
 
+function createTextTarget(parentElement) {
+  return { parentElement };
+}
+
 function assert(condition, message) {
   if (!condition) {
     throw new Error(message);
@@ -166,6 +170,15 @@ function runClick(harness, event) {
   assert(harness.assigned.length === 1, 'Callback should navigate once.');
   harness.timers[0].fn();
   assert(harness.assigned.length === 1, 'Callback and fallback together should still navigate once.');
+}
+
+{
+  const harness = createHarness();
+  const link = new FakeAnchorElement();
+  const event = createEvent(link, { target: createTextTarget(link) });
+  runClick(harness, event);
+  assert(event.defaultPrevented, 'Clicking tracked link text should be intercepted.');
+  assert(lastGtagEvent(harness), 'Clicking tracked link text should queue select_content.');
 }
 
 {
