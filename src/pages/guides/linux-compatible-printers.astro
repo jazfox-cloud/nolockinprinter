@@ -3,63 +3,70 @@ import SiteLayout from '../../layouts/SiteLayout.astro';
 ---
 
 <SiteLayout
-  title="Linux-Compatible Printers"
-  description="A Linux printer buying guide focused on CUPS, driverless printing, AirPrint compatibility, vendor drivers, and no-lock-in ownership."
+  title="Linux-Compatible Printers: Printing and Scanning"
+  description="Compare documented Linux print and scan support for Brother HL-L2460DW and MFC-J4335DW, with driver links and checks for your distribution and workflow."
 >
   <div class="article">
     <p class="eyebrow" style="color: var(--amber);">Linux guide</p>
-    <h1>A Linux printer with manufacturer-documented support—and three models with unresolved Linux evidence.</h1>
-    <p class="lead">
-      Linux printer shopping is not just about drivers. It is also about local printing, predictable supplies, and avoiding app-only workflows.
-    </p>
+    <h1>Choose for Linux printing and scanning separately.</h1>
+    <p class="lead">Need only black-and-white printing? Start with the HL-L2460DW. Need color and a scanner? The MFC-J4335DW also has official Linux downloads. Neither listing proves every feature works on your distribution.</p>
+    <p class="evidence-note">Linux download pages checked September 18, 2026. Hardware summaries retain the July 22 document reviews. We have not tested either printer on Linux.</p>
   </div>
 
   <section class="section alt">
     <div class="container">
       <div class="section-head">
-        <div>
-          <p class="eyebrow" style="color: var(--amber);">Documented Linux option</p>
-          <h2>Brother HL-L2460DW</h2>
-        </div>
-        <p>Brother's U.S. specification page explicitly lists Linux and publishes local network protocols. Exact distribution, architecture, and current driver availability still need a pre-purchase check.</p>
+        <div><p class="eyebrow" style="color: var(--amber);">Match the workflow</p><h2>Two models with official Linux downloads</h2></div>
+        <p>Printing, scanning to a computer, and scanning directly to a network folder are different capabilities. Verify the one you actually need.</p>
       </div>
-      <div class="linux-evidence-card">
-        <h3>Why it clears this page's evidence bar</h3>
-        <ul>
-          <li>Brother explicitly lists Linux among compatible operating systems.</li>
-          <li>Its specifications list Ethernet, USB, Wi-Fi Direct, IPP/IPPS, LPR/LPD, mDNS, and Port 9100.</li>
-          <li>The documented TN830-family toner and DR830 drum can be purchased outside a Refresh subscription.</li>
-          <li>It is monochrome and print-only, so it is not a substitute for a color all-in-one.</li>
-        </ul>
-        <p><a href="https://www.brother-usa.com/p/laser-printers/HLL2460DW">Brother HL-L2460DW official specifications</a> · <a href="/guides/no-subscription-printers/#brother-hl-l2460dw">Full ownership evidence review</a></p>
-        <p class="evidence-note"><strong>Last verified:</strong> 2026-07-22. Based on published manufacturer specifications; not independently tested.</p>
+      <p class="evidence-note">Scroll sideways on smaller screens to compare the evidence.</p>
+      <div class="comparison-wrap" role="region" aria-label="Linux printing and scanning comparison" tabindex="0">
+        <table>
+          <caption>Published support is evidence of an available software path, not a hands-on compatibility result.</caption>
+          <thead><tr><th scope="col">Model</th><th scope="col">Print support</th><th scope="col">Scan support</th><th scope="col">Local connections</th><th scope="col">Still to verify</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Brother HL-L2460DW</th><td>Official Linux printer package; black-and-white output</td><td>No scanner hardware</td><td>USB, Ethernet, Wi-Fi Direct; listed IPP/IPPS and LPR/LPD</td><td>Your distribution and architecture; driverless discovery; required duplex settings</td></tr>
+            <tr><th scope="row">Brother MFC-J4335DW</th><td>Official Linux printer package; color output</td><td>Official scanner packages and scan-key tool listed</td><td>USB and Wi-Fi Direct; no Ethernet</td><td>Your distribution and architecture; scanner permissions and connection; ADF workflow; account requirements</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="decision-grid">
+        <article>
+          <h3>HL-L2460DW: documents without a scanner</h3>
+          <p>Its monochrome, print-only hardware is the key limit. A generic installer description that mentions scanners does not add scanning to this model.</p>
+          <p><a href="https://support.brother.com/g/b/downloadlist.aspx?c=us&amp;lang=en&amp;os=128&amp;prod=hll2460dw_us_as">Official Linux downloads</a> · <a href="/guides/no-subscription-printers/#brother-hl-l2460dw">Hardware and supply evidence</a></p>
+        </article>
+        <article>
+          <h3>MFC-J4335DW: a color and scanning candidate</h3>
+          <p>The official download page supplies a Linux print driver plus separate scanner packages. This corrects our earlier conclusion based only on the U.S. product summary. Download availability does not establish successful installation or driverless scanning.</p>
+          <p><a href="https://support.brother.com/g/b/downloadlist.aspx?c=us&amp;lang=en&amp;os=128&amp;prod=mfcj4335dw_us_eu">Official Linux print and scan downloads</a> · <a href="/guides/no-subscription-printers/#brother-mfc-j4335dw">Hardware and supply evidence</a></p>
+        </article>
       </div>
     </div>
   </section>
 
   <article class="article">
     <section class="article-section">
-      <h2>What to verify before buying</h2>
-      <ul>
-        <li>Whether the printer advertises IPP Everywhere/AirPrint to CUPS, or whether a vendor package is needed.</li>
-        <li>Scanner support if you need all-in-one features.</li>
-        <li>USB and local network printing without forced cloud setup.</li>
-        <li>Whether the vendor publishes current Linux packages for your architecture.</li>
-      </ul>
+      <h2>Check these before buying</h2>
+      <ol>
+        <li><strong>Match the model and region.</strong> Open the exact model’s official downloads, not another printer with a similar name.</li>
+        <li><strong>Match the software.</strong> Check your distribution, release, package format, and CPU architecture in the individual download instructions. A “64-bit” label alone does not establish ARM support.</li>
+        <li><strong>Choose the connection.</strong> Check the instructions for USB or your local network. Do not assume success on one connection proves the other.</li>
+        <li><strong>Check scanning separately.</strong> Find the scanner package and required permissions, then distinguish flatbed, ADF, duplex scanning, scan-button operation, and saving to a network folder. We have not verified all of these for the MFC-J4335DW.</li>
+        <li><strong>Verify your routine during the return period.</strong> Print your own document, try duplex if needed, and scan from your actual application and connection. Only describe a workflow as tested after that check.</li>
+      </ol>
     </section>
-
     <section class="article-section">
-      <h2>Why the other three models are not Linux recommendations here</h2>
-      <p>
-        Brother's MFC-J4335DW U.S. page, the reviewed Epson ET-2850 user guide, and Canon's G3270 U.S. specification page do not provide the same explicit Linux compatibility evidence. Some may work through driverless protocols or separate regional packages, but protocol availability is not a substitute for verifying printing, scanning, maintenance, and the exact distribution. They remain in the general no-subscription guide, not this Linux recommendation.
-      </p>
+      <h2>Does an official driver mean driverless printing?</h2>
+      <p>No. A vendor package is one software path. A driverless path needs its own model and protocol evidence and a check on your computer. An AirPrint or network-protocol listing also does not prove that scanning, maintenance, and every print setting work through that same path.</p>
     </section>
-
     <section class="article-section">
-      <h2>Why this page belongs on the site</h2>
-      <p>
-        Linux-compatible printer searches overlap naturally with the no-lock-in audience: these users care about local control, repairability, open protocols, and predictable ownership.
-      </p>
+      <h2>What about the ET-2850 and G3270?</h2>
+      <p>The sources retained in our <a href="/guides/no-subscription-printers/">general buying guide</a> do not establish the complete Linux print-and-scan workflow for either model. That is an evidence gap, not a finding that Linux cannot work. We have not completed a separate Linux package and scanner-support review for these two models.</p>
+    </section>
+    <section class="article-section">
+      <h2>Need a printer without accounts or subscriptions too?</h2>
+      <p>Linux download availability does not answer account, supply, or firmware questions. Compare the <a href="/guides/no-subscription-printers/#accounts-and-offline-use">account and offline-use boundaries</a>, then check the ordinary toner or ink required for your model.</p>
     </section>
   </article>
 </SiteLayout>

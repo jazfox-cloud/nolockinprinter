@@ -8,14 +8,14 @@
     "evidenceBasis": "Published Brother U.S. product, supplies, and Refresh subscription documentation. Not independently tested.",
     "summary": "A color inkjet all-in-one that uses Brother LC406 cartridges and offers USB, Wi-Fi, and Wi-Fi Direct. Brother markets it as Refresh subscription-ready, but also sells ordinary LC406 cartridges for the model.",
     "bestFor": "A home office that needs color, scanning, copying, fax, automatic two-sided printing, and a documented path to buy ordinary cartridges instead of joining a print plan.",
-    "notFor": "Buyers who want refill bottles, Ethernet, a manufacturer-documented Linux driver, or proof that third-party cartridges will keep working after future firmware changes.",
+    "notFor": "Buyers who want refill bottles, Ethernet, or proof that third-party cartridges will keep working after future firmware changes.",
     "pros": [
       "Brother documents standard and high-yield LC406 replacement cartridges outside the Refresh program.",
       "USB, Wi-Fi Direct, AirPrint, and Mopria provide several documented printing paths.",
       "Automatic duplex printing and print/copy/scan/fax functions are documented."
     ],
     "limitations": [
-      "The official U.S. specification page lists Windows and macOS drivers, not Linux.",
+      "The U.S. product summary omits Linux, but Brother’s support site provides Linux print and scan packages. Check the package architecture and installation instructions; we have not tested them.",
       "Refresh subscription cartridges may stop working after cancellation; Brother tells users to have non-Refresh cartridges ready.",
       "No official source reviewed promises support for third-party ink or protection from future firmware restrictions."
     ],
@@ -30,7 +30,7 @@
       {"label": "Consumables", "value": "Brother LC406 standard or high-yield cartridges; separate black, cyan, magenta, and yellow", "sources": ["brother-supplies"]},
       {"label": "Subscription", "value": "Refresh EZ Print is available by enrollment and can be cancelled; subscription cartridges may deactivate after cancellation, so non-Refresh cartridges are required to continue", "sources": ["brother-refresh"]},
       {"label": "Non-subscription use", "value": "Standard LC406 cartridges are sold for this model; continued use without Refresh is documented through non-Refresh cartridges", "sources": ["brother-supplies", "brother-refresh"]},
-      {"label": "Official OS listing", "value": "Windows and macOS on the U.S. product page; Linux is not listed", "sources": ["brother-product"]},
+      {"label": "Official OS listing", "value": "Windows and macOS on the U.S. product page; the official support site separately provides Linux print and scan drivers (checked September 18, 2026)", "sources": ["brother-product", "brother-linux"]},
       {"label": "Warranty", "value": "2-year limited warranty listed for the U.S. product", "sources": ["brother-product"]}
     ],
     "ownershipChecks": [
@@ -39,9 +39,10 @@
       {"label": "Consumable transparency", "status": "Documented", "note": "LC406 standard and high-yield families are identified.", "sources": ["brother-supplies"]},
       {"label": "Local connection", "status": "Documented", "note": "USB and Wi-Fi Direct are listed.", "sources": ["brother-product"]},
       {"label": "Long-term support material", "status": "Mixed", "note": "Product and support material exists, but future firmware and third-party supply behavior are not promised.", "sources": ["brother-product"]},
-      {"label": "Documentation completeness", "status": "Mixed", "note": "Core U.S. specifications are detailed; Linux support and account-free initial setup are not established.", "sources": ["brother-product"]}
+      {"label": "Documentation completeness", "status": "Mixed", "note": "Core specifications and Linux download availability are documented; account-free initial setup and distribution-specific operation are not established.", "sources": ["brother-product", "brother-linux"]}
     ],
     "sources": [
+      {"id": "brother-linux", "title": "Brother MFC-J4335DW Linux print and scan downloads (checked September 18, 2026)", "url": "https://support.brother.com/g/b/downloadlist.aspx?c=us&lang=en&os=128&prod=mfcj4335dw_us_eu"},
       {"id": "brother-product", "title": "Brother MFC-J4335DW product and specifications", "url": "https://www.brother-usa.com/p/inkjet-printers/MFCJ4335DW"},
       {"id": "brother-supplies", "title": "Brother LC406 standard-yield cartridge set", "url": "https://www.brother-usa.com/p/ink-toner/LC4064PKS"},
       {"id": "brother-refresh", "title": "Brother Refresh EZ Print subscription information", "url": "https://www.brother-usa.com/ink-toner/learn-more/refresh-ez-print-subscription"}

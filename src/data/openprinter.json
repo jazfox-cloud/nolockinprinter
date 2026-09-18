@@ -1,13 +1,17 @@
 {
   "name": "Open Printer",
   "maker": "Open Tools",
-  "status": "Unreleased project",
-  "lastReviewed": "2026-07-22",
-  "summary": "An unreleased open hardware-inspired inkjet project. The project pages publish planned specifications, but do not yet establish a shipped consumer product.",
+  "status": "Crowdfunding planned; not yet launched",
+  "lastReviewed": "2026-09-18",
+  "summary": "The team plans to launch its Crowd Supply campaign in autumn 2026. The campaign is not live yet; final pricing, an exact launch date, and a shipping date have not been announced in the reviewed sources.",
   "officialLinks": [
     {
+      "label": "September 17, 2026: On the Road to Launch",
+      "url": "https://www.crowdsupply.com/open-tools/openprinter/updates/on-the-road-to-launch"
+    },
+    {
       "label": "Crowd Supply project page",
-      "url": "https://www.crowdsupply.com/open-tools/open-printer"
+      "url": "https://www.crowdsupply.com/open-tools/openprinter"
     },
     {
       "label": "Open Tools official site",
@@ -15,7 +19,8 @@
     }
   ],
   "confirmedFacts": [
-    "No campaign price or final shipping date was visible on the two reviewed project pages.",
+    "In its September 17 update, the team reports beta testing, software refinement, and production-logistics planning. It plans an autumn 2026 crowdfunding launch; this is not a shipping commitment.",
+    "The team says the exact campaign launch date, roadmap, complete specifications, and final pricing will be shared in a future update.",
     "The developers state planned CUPS support and HP 63, HP 302, and HP 803 cartridge compatibility by region.",
     "The developers state that project files will use CC BY-NC-SA 4.0, while also saying files will be released only after the final version is ready.",
     "Open Tools says patent and design registrations have been filed."

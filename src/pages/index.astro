@@ -34,51 +34,38 @@ import OpenPrinterStatus from '../components/OpenPrinterStatus.astro';
   <section class="section">
     <div class="container">
       <div class="section-head">
-        <div>
-          <p class="eyebrow" style="color: var(--amber);">Two-track strategy</p>
-          <h2>Today’s documented choices, tomorrow’s open hardware.</h2>
-        </div>
-        <p>
-          The site is built around a durable commercial core, with OpenPrinter used as a high-interest frontier topic rather than the whole business.
-        </p>
+        <div><p class="eyebrow" style="color: var(--amber);">Start with your needs</p><h2>What do you need your printer to do?</h2></div>
+        <p>Choose a route, compare the limits, and check the sources for your exact model before buying.</p>
       </div>
-
-      <div class="grid-2">
-        <article class="card feature-card">
-          <div class="card-body">
-            <div class="tag-row">
-              <span class="tag">Commercial core</span>
-              <span class="tag amber">Buy now</span>
-            </div>
-            <h3>The Resistance</h3>
-            <p class="muted">
-              Practical guides for people who want refillable ink, no mandatory subscriptions, predictable toner, and fewer firmware surprises.
-            </p>
-            <div class="actions">
-              <a class="button" href="/guides/no-subscription-printers/">View no-subscription picks</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="card feature-card">
-          <div class="card-body">
-            <div class="tag-row">
-              <span class="tag">Frontier tracker</span>
-              <span class="tag brick">Not launched</span>
-            </div>
-            <h3>The Frontier</h3>
-            <p class="muted">
-              A sober OpenPrinter tracker that separates confirmed facts from wishful thinking: no confirmed price, no release date, and licensing limits to understand.
-            </p>
-            <div class="actions">
-              <a class="button" href="/openprinter/">Open status board</a>
-            </div>
-          </div>
-        </article>
+      <div class="decision-grid">
+        <article><h3>A printer without a mandatory subscription</h3><p>Compare four models by color, scanning, duplex printing, and ordinary supplies.</p><a href="/guides/no-subscription-printers/#quick-comparison">Compare the four options</a></article>
+        <article><h3>Printing or scanning from Linux</h3><p>Check print and scan support separately, including official driver downloads and what remains untested.</p><a href="/guides/linux-compatible-printers/">Check Linux support</a></article>
+        <article><h3>Printing without a vendor account</h3><p>A local USB or Wi-Fi connection does not settle account requirements for setup, scanning, or maintenance.</p><a href="/guides/no-subscription-printers/#accounts-and-offline-use">Check account and offline limits</a></article>
+        <article><h3>Printing after cancelling Instant Ink</h3><p>Find out which cartridges you need and why cancelling an ink plan differs from returning a subscription printer.</p><a href="/guides/print-after-cancelling-hp-instant-ink/">Read the cancellation guide</a></article>
       </div>
     </div>
   </section>
 
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow" style="color: var(--amber);">Documented shortlist</p>
+          <h2>Four different ownership tradeoffs.</h2>
+        </div>
+        <p>These U.S. model summaries link to dated manufacturer-document reviews. Availability, prices, and regional variants need a fresh check before purchase.</p>
+      </div>
+      <div class="grid-2 shortlist-grid">
+        <article class="card"><div class="card-body"><h3>Brother MFC-J4335DW</h3><p class="muted">Color office functions and ordinary LC406 cartridges alongside an optional subscription path.</p><a href="/guides/no-subscription-printers/#brother-mfc-j4335dw">Review the cartridge boundary</a></div></article>
+        <article class="card"><div class="card-body"><h3>Epson EcoTank ET-2850</h3><p class="muted">Refill tanks and automatic duplex; do not confuse the retail model with subscription-only ET-2850U.</p><a href="/guides/no-subscription-printers/#epson-ecotank-et-2850">Review the model distinction</a></div></article>
+        <article class="card"><div class="card-body"><h3>Canon PIXMA G3270</h3><p class="muted">Refillable GI-21 tanks and Wireless Direct, but simplex document printing and unclear account-free setup.</p><a href="/guides/no-subscription-printers/#canon-pixma-g3270">Review the documented limits</a></div></article>
+        <article class="card"><div class="card-body"><h3>Brother HL-L2460DW</h3><p class="muted">Monochrome laser with Ethernet, local protocols, and Linux explicitly listed by Brother.</p><a href="/guides/no-subscription-printers/#brother-hl-l2460dw">Review the Linux option</a></div></article>
+      </div>
+      <div class="actions">
+        <a class="button" href="/guides/no-subscription-printers/">Read the sourced buying guide</a>
+      </div>
+    </div>
+  </section>
   <section class="section alt">
     <div class="container split">
       <OpenPrinterStatus />
@@ -99,24 +86,4 @@ import OpenPrinterStatus from '../components/OpenPrinterStatus.astro';
     </div>
   </section>
 
-  <section class="section">
-    <div class="container">
-      <div class="section-head">
-        <div>
-          <p class="eyebrow" style="color: var(--amber);">Documented shortlist</p>
-          <h2>Four different ownership tradeoffs.</h2>
-        </div>
-        <p>Each summary is based on current U.S. manufacturer documents and states what we did not independently test.</p>
-      </div>
-      <div class="grid-2 shortlist-grid">
-        <article class="card"><div class="card-body"><h3>Brother MFC-J4335DW</h3><p class="muted">Color office functions and ordinary LC406 cartridges alongside an optional subscription path.</p><a href="/guides/no-subscription-printers/#brother-mfc-j4335dw">Review the cartridge boundary</a></div></article>
-        <article class="card"><div class="card-body"><h3>Epson EcoTank ET-2850</h3><p class="muted">Refill tanks and automatic duplex; do not confuse the retail model with subscription-only ET-2850U.</p><a href="/guides/no-subscription-printers/#epson-ecotank-et-2850">Review the model distinction</a></div></article>
-        <article class="card"><div class="card-body"><h3>Canon PIXMA G3270</h3><p class="muted">Refillable GI-21 tanks and Wireless Direct, but simplex document printing and unclear account-free setup.</p><a href="/guides/no-subscription-printers/#canon-pixma-g3270">Review the documented limits</a></div></article>
-        <article class="card"><div class="card-body"><h3>Brother HL-L2460DW</h3><p class="muted">Monochrome laser with Ethernet, local protocols, and Linux explicitly listed by Brother.</p><a href="/guides/no-subscription-printers/#brother-hl-l2460dw">Review the Linux option</a></div></article>
-      </div>
-      <div class="actions">
-        <a class="button" href="/guides/no-subscription-printers/">Read the sourced buying guide</a>
-      </div>
-    </div>
-  </section>
 </SiteLayout>

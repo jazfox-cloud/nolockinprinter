@@ -15,6 +15,35 @@ import PrinterGuide from '../../components/PrinterGuide.astro';
     </p>
   </div>
 
+  <section class="section" id="quick-comparison">
+    <div class="container">
+      <div class="section-head">
+        <div><p class="eyebrow" style="color: var(--amber);">Quick comparison</p><h2>Start with the job you need to do</h2></div>
+        <p>These are four different options, not an overall ranking. Hardware and supply details below summarize the July 22, 2026 reviews; Linux download evidence was added on September 18. Account-free setup has not been verified for any of the four.</p>
+      </div>
+      <div class="actions" aria-label="Choose a printing need">
+        <a class="button" href="#brother-hl-l2460dw">Black-and-white documents</a>
+        <a class="button" href="#epson-ecotank-et-2850">Refillable color + duplex</a>
+        <a class="button" href="#brother-mfc-j4335dw">Color + document feeder</a>
+        <a class="button" href="/guides/linux-compatible-printers/">Linux printing or scanning</a>
+      </div>
+      <p class="evidence-note">On smaller screens, scroll the comparison sideways. Each model links to its detailed evidence and official sources below.</p>
+      <div class="comparison-wrap" role="region" aria-label="Printer comparison" tabindex="0">
+        <table>
+          <caption>Compare functions and supplies before reading the full reviews.</caption>
+          <thead><tr><th scope="col">Model / use</th><th scope="col">Output</th><th scope="col">Scan / feeder</th><th scope="col">Automatic two-sided printing</th><th scope="col">Ordinary supplies</th><th scope="col">Account-free setup</th><th scope="col">Main limit</th></tr></thead>
+          <tbody>
+            <tr><th scope="row"><a href="#brother-hl-l2460dw">Brother HL-L2460DW</a><br />Text documents</th><td>Black-and-white laser</td><td>No scanner</td><td>Yes</td><td>TN830-family toner; separate DR830 drum</td><td>Not verified</td><td>No color or copying</td></tr>
+            <tr><th scope="row"><a href="#epson-ecotank-et-2850">Epson ET-2850</a><br />Refillable color with duplex</th><td>Color inkjet</td><td>Flatbed; no ADF</td><td>Yes</td><td>Refill bottles</td><td>Not verified</td><td>Check the suffix: ET-2850U has different subscription requirements</td></tr>
+            <tr><th scope="row"><a href="#canon-pixma-g3270">Canon G3270</a><br />Refillable color with dual-band Wi-Fi</th><td>Color inkjet</td><td>Flatbed; no ADF</td><td>No</td><td>GI-21 bottles</td><td>Not verified</td><td>No automatic duplex or Ethernet</td></tr>
+            <tr><th scope="row"><a href="#brother-mfc-j4335dw">Brother MFC-J4335DW</a><br />Color office documents</th><td>Color inkjet</td><td>Scanner and ADF; do not assume duplex scanning</td><td>Yes</td><td>LC406 retail cartridges</td><td>Not verified</td><td>Cartridges rather than refill bottles; no Ethernet</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p><a href="#accounts-and-offline-use">Need no account or no internet?</a> · <a href="#occasional-printing">Only print occasionally?</a> · <a href="/guides/print-after-cancelling-hp-instant-ink/">Already cancelling Instant Ink?</a></p>
+    </div>
+  </section>
+
   <section class="section alt">
     <div class="container">
       <div class="section-head">
@@ -22,7 +51,7 @@ import PrinterGuide from '../../components/PrinterGuide.astro';
           <p class="eyebrow" style="color: var(--amber);">Sourced model reviews</p>
           <h2>Different strengths, different limits</h2>
         </div>
-        <p>U.S. model documentation was last checked on July 22, 2026. These are editorial comparisons based on published specifications, not independently tested results or promises about future firmware.</p>
+        <p>The full U.S. model reviews date from July 22, 2026; the MFC-J4335DW Linux download correction was checked September 18. Other model fields have not been reverified for this update. These are document reviews, not independent product tests.</p>
       </div>
       <PrinterGuide />
     </div>
@@ -44,6 +73,24 @@ import PrinterGuide from '../../components/PrinterGuide.astro';
         <li><strong>Mobile apps</strong> can be convenient for setup, scanning, and maintenance, but their account and telemetry requirements should be checked separately.</li>
         <li><strong>Cloud printing</strong> enables remote jobs or scan-to-cloud features and normally adds an account, internet connection, and service-policy dependency.</li>
       </ul>
+    </section>
+
+    <section class="article-section" id="accounts-and-offline-use">
+      <h2>Can I use these printers without an account or internet?</h2>
+      <p>We have not verified account-free first-time setup for these four models. Their reviewed documentation lists local connections, but that alone does not prove that setup, scanning, or maintenance never asks for an account.</p>
+      <ul>
+        <li><strong>MFC-J4335DW:</strong> USB and Wi-Fi Direct are documented. Account-free setup and every scan workflow remain untested.</li>
+        <li><strong>ET-2850:</strong> the standard model documents USB and Wi-Fi Direct; optional Epson Connect cloud services are a separate path. Do not apply these notes to ET-2850U.</li>
+        <li><strong>G3270:</strong> USB and Wireless Direct are documented. ARS replenishment capability does not establish its account-free setup behavior.</li>
+        <li><strong>HL-L2460DW:</strong> USB, Ethernet, and local network protocols are documented. It has no scanner; account-free setup has not been tested here.</li>
+      </ul>
+      <p>Before buying, ask the manufacturer about your exact OS and connection: “Can I complete first-time setup and print locally without creating a vendor account? Does scanning require one? Which functions stop if internet access is unavailable?” Check the answers against the setup manual, and test your required workflow during the return period. Use the model-specific sources in the reviews above.</p>
+    </section>
+
+    <section class="article-section" id="occasional-printing">
+      <h2>What if I print only a few times a month?</h2>
+      <p>Start by deciding whether you actually need color and scanning. If your jobs are black-and-white documents, compare the HL-L2460DW with the cost of a separate scanner if needed. If color matters, compare the two refillable models and the MFC-J4335DW, then read the exact model’s storage and maintenance instructions before choosing.</p>
+      <p>Do not choose on bottle or cartridge price alone. Include the purchase price, replacement supplies, a separate drum where applicable, maintenance, and the functions you would otherwise buy separately. This guide has no current price survey or tested cost-per-page comparison, so it does not claim a cheapest option or promise an idle period with no maintenance.</p>
     </section>
 
     <section class="article-section">
@@ -68,3 +115,21 @@ import PrinterGuide from '../../components/PrinterGuide.astro';
     </section>
   </article>
 </SiteLayout>
+
+<style>
+  #quick-comparison,
+  #accounts-and-offline-use,
+  #occasional-printing,
+  :global(.printer-card) {
+    scroll-margin-top: 100px;
+  }
+
+  @media (max-width: 720px) {
+    #quick-comparison,
+    #accounts-and-offline-use,
+    #occasional-printing,
+    :global(.printer-card) {
+      scroll-margin-top: 160px;
+    }
+  }
+</style>
